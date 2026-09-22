@@ -727,6 +727,39 @@
     .sc .r .track i{inset:0 calc(100% - var(--w)) 0 0}
     html{scroll-behavior:auto}
   }
+  /* LAPTOP SCALE. The type scale is sized off vw, which knows nothing about
+     height, so on a wide-but-short laptop everything stayed at 27-inch size and
+     content meant to be read together would not fit on one screen — Luke's words:
+     "like i need to zoom out to 75%". This is that zoom-out, done properly.
+     Tall desktop monitors are untouched. */
+  @media(min-width:921px) and (max-height:1050px){
+    section{padding-block:clamp(44px,5.6vw,84px)}
+    .h2{font-size:clamp(38px,5.4vw,72px)}
+    .h2.xl{font-size:clamp(48px,7.4vw,104px)}
+    .hero h1{font-size:clamp(64px,7.2vw,116px)}
+    .lede{font-size:17px;margin-top:16px}
+    .eyebrow{margin-bottom:12px}
+    /* sections whose whole point is being read in one screen get their own trim */
+    .vibe-pin .h2{font-size:clamp(42px,5.2vw,78px)}
+    .vibe ul{margin-top:26px}
+    .vibe li{font-size:clamp(19px,2vw,28px);padding:9px 0}
+    .midcta .lede.sell{font-size:clamp(17px,1.7vw,21px)}
+    .final .h2.xl{font-size:clamp(44px,6vw,88px)}
+  }
+  /* and the Circuit pin specifically: its stacked sticky cards need ~860px of
+     headroom (104px offset + 6 x 62px stagger + card height), which a short
+     screen does not have — the engine squashed into the corner and the cards ran
+     off the bottom with their title plates overlapping. */
+  @media(min-width:921px) and (max-height:1050px){
+    #circuit .h2{font-size:clamp(38px,4.2vw,62px)}
+    #circuit .lede{font-size:16px;margin-top:14px}
+    #circuit .circuit{margin-top:26px}
+    .eng-wrap{top:86px}
+    .eng{max-width:290px}
+    .cards{gap:16px}
+    @media(min-width:921px){.cards{padding-bottom:8vh}}
+    .card-stage{top:calc(86px + var(--i) * 34px);padding:32px 34px 28px!important}
+  }
 </style>
 
 <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><defs>
