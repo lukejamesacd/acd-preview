@@ -1094,6 +1094,33 @@
   .push .ah{margin-inline:auto}
   .push .stack{max-width:720px;margin-left:auto;margin-right:auto;text-align:left}
   .push .btns{justify-content:center}
+
+  /* the conflict-of-interest block: named before they think it */
+  .honest{background:color-mix(in srgb,var(--raise) 70%,transparent);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .honest .ah{max-width:20ch}
+  .honest ul{list-style:none;margin:clamp(26px,3vw,38px) 0 0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:16px clamp(22px,3vw,46px)}
+  @media(max-width:860px){.honest ul{grid-template-columns:1fr}}
+  .honest li{display:flex;gap:13px;align-items:flex-start;font-size:16.5px;line-height:1.5;color:var(--fg);
+      padding-top:16px;border-top:1px solid var(--line)}
+  .honest li b{flex:none;font-family:var(--mono);font-size:10px;letter-spacing:.1em;color:var(--accent-t);margin-top:4px}
+
+  /* the arithmetic */
+  .maths{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin:clamp(26px,3vw,40px) auto 0;max-width:820px;
+      border:1px solid var(--line);text-align:left}
+  @media(max-width:760px){.maths{grid-template-columns:1fr 1fr}}
+  .maths div{padding:20px 20px 22px;border-right:1px solid var(--line)}
+  .maths div:last-child{border-right:0}
+  @media(max-width:760px){.maths div:nth-child(2n){border-right:0}.maths div:nth-child(-n+2){border-bottom:1px solid var(--line)}}
+  .maths b{display:block;font-family:var(--display);font-size:clamp(22px,2.4vw,32px);line-height:1;color:var(--fg)}
+  .maths .hi{color:var(--accent-t)}
+  .maths span{display:block;margin-top:9px;font-family:var(--mono);font-size:9.5px;letter-spacing:.08em;
+      text-transform:uppercase;color:var(--muted);line-height:1.4}
+  .audition{max-width:60ch;margin:clamp(26px,3vw,38px) auto 0;font-family:var(--serif);font-style:italic;
+      font-size:clamp(18px,1.9vw,25px);line-height:1.4;color:var(--fg)}
+  .leverage{margin-top:clamp(22px,2.6vw,32px);padding:22px 26px;border-left:3px solid var(--accent-t);
+      background:color-mix(in srgb,var(--raise) 60%,transparent)}
+  .leverage p{margin:0;font-size:16.5px;line-height:1.5;color:var(--fg)}
+  .leverage b{font-family:var(--display);text-transform:uppercase;letter-spacing:.03em;font-size:15px;display:block;margin-bottom:8px}
 </style>
 
 <header id="hdr">
@@ -1199,6 +1226,20 @@
   </div>
 </section>
 
+<!-- 04b THE CONFLICT OF INTEREST, NAMED -->
+<section class="dark honest">
+  <div class="wrap rv">
+    <h2 class="ah">Yes, I also<span class="it">sell the fix.</span></h2>
+    <p class="say" style="max-width:56ch">Which is exactly why you should be sceptical of an audit from me. So here is how you know this one isn&rsquo;t a sales document dressed up as a diagnosis.</p>
+    <ul>
+      <li><b>01</b><span>The checklist is fixed. The same nine categories, scored the same way, on every account that comes through, whether you ever speak to me again or not.</span></li>
+      <li><b>02</b><span>The three fixes come out ranked by what they are costing you, not by what I would charge to do them.</span></li>
+      <li><b>03</b><span>Two of the three are usually things you or your current provider can action in an afternoon, without me anywhere near it.</span></li>
+      <li><b>04</b><span>The report is written to be handed to someone else. That is the point of it, not a concession.</span></li>
+    </ul>
+  </div>
+</section>
+
 <!-- 05 WHAT LANDS IN YOUR INBOX ............................. -->
 <section class="dark artsec" id="included">
   <div class="wrap rv">
@@ -1225,6 +1266,10 @@
       <div class="planrow"><div class="rank">03</div><div><h4>Cut the form from eleven fields to four</h4><p>Name, phone, suburb, job type. Everything else you can ask on the call.</p></div><div class="amt2">+120%<small>documented lift, 11 fields to 4</small></div></div>
     </div>
     <p class="stagenote" style="margin-top:16px">Dollar figures come from your own account and the two numbers on the intake form &middot; example shown</p>
+    <div class="leverage">
+      <p><b>It changes the conversation you&rsquo;re already having</b>
+      Whether that is with your agency, your freelancer, or the person in your business who &ldquo;does the marketing&rdquo;, you will be pointing at a number instead of a feeling. Most people send the recording on the same day they get it.</p>
+    </div>
   </div>
 </section>
 
@@ -1250,6 +1295,14 @@
 <section class="dark field push" id="start">
   <div class="wrap rv">
     <h2 class="ah">The best $97<span class="it">you&rsquo;ll spend this month.</span></h2>
+    <p class="say" style="max-width:58ch;margin-inline:auto">Run the numbers on your own spend. This is the most common single finding, on the most common budget.</p>
+    <div class="maths">
+      <div><b>$3,000</b><span>a month on Meta</span></div>
+      <div><b>$36,000</b><span>a year through the account</span></div>
+      <div><b class="hi">$12,000</b><span>going to the wrong campaign objective</span></div>
+      <div><b>$97</b><span>to find out which third</span></div>
+    </div>
+    <p class="audition">Think of it as a paid trial of how I work. You are not choosing a provider today. You are spending $97 to watch one work on your account for ninety minutes, and then deciding whether you want more of that.</p>
     <div class="stack">
       <ul>
         <li><span class="tk"><svg viewBox="0 0 24 24"><path d="M4 12.5l5.5 5.5L20 7"/></svg></span><span><b>A scored report</b> &mdash; nine categories, each out of 100, with the reasoning behind every mark.</span></li>
