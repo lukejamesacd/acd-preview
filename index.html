@@ -750,6 +750,16 @@
        to the top: it takes the excess off the bottom, which the copy covers. */
     .film{object-position:28% 14%}
     .final-film .bgvid{object-position:66% 12%}
+    /* the wheel is the tallest thing on the page: stage 660px plus heading plus
+       nav ran well past a short screen. Scale the whole rig ~80%. */
+    .wstage{height:524px;perspective:1500px;margin-bottom:16px}
+    .tq{top:214px}
+    .tq .card{padding:36px 42px 32px 30px;min-height:232px;grid-template-columns:296px minmax(0,1fr);gap:0 22px}
+    .tq .holo{left:30px;bottom:28px;width:296px;height:376px}
+    .tq blockquote{font-size:clamp(15px,1.05vw,17px)}
+    .tq .tnm{font-size:15px;margin-top:14px}
+    .tq.s1{transform:translate3d(56%,-42px,-500px) rotateY(-38deg) scale(.66)}
+    .tq.s2{transform:translate3d(-56%,-42px,-500px) rotateY(38deg) scale(.66)}
   }
   /* and the Circuit pin specifically: its stacked sticky cards need ~860px of
      headroom (104px offset + 6 x 62px stagger + card height), which a short
