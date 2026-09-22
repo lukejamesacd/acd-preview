@@ -745,6 +745,11 @@
     .vibe li{font-size:clamp(19px,2vw,28px);padding:9px 0}
     .midcta .lede.sell{font-size:clamp(17px,1.7vw,21px)}
     .final .h2.xl{font-size:clamp(44px,6vw,88px)}
+    /* A wide-but-short viewport crops the 16:9 footage vertically, and the header
+       is fixed over it, so at 45% Luke's head sat behind the bar. Bias the crop
+       to the top: it takes the excess off the bottom, which the copy covers. */
+    .film{object-position:28% 14%}
+    .final-film .bgvid{object-position:66% 12%}
   }
   /* and the Circuit pin specifically: its stacked sticky cards need ~860px of
      headroom (104px offset + 6 x 62px stagger + card height), which a short
