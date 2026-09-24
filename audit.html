@@ -609,6 +609,16 @@
   .incl{font-size:13.5px;color:var(--muted)}
   .bigmark{font-family:var(--display);font-size:clamp(60px,17vw,230px);line-height:.8;color:color-mix(in srgb,var(--fg) 9%,var(--dk-bg));margin-top:30px;margin-bottom:-.16em;text-transform:uppercase;white-space:nowrap}
   .sources{font-family:var(--mono);font-size:10.5px;color:var(--faint);letter-spacing:.04em}
+  /* landing-page footer: legal only, no navigation away except the quiet strategy-call route */
+  footer.lp{padding-block:40px 0}
+  footer.lp .fineprint a{color:inherit}
+  footer.lp .quiet{font-size:13.5px;color:var(--muted)}
+  footer.lp .quiet a{color:var(--accent-t);text-decoration:none;white-space:nowrap}
+  footer.lp .quiet a:hover{text-decoration:underline}
+  footer.lp .legal{flex-direction:column;gap:10px}
+  footer.lp .legal p{margin:0;font-size:12.5px;line-height:1.55;color:var(--faint);max-width:110ch}
+  footer.lp .legal b{color:var(--muted);font-weight:600}
+  footer.lp .legal a{color:var(--muted)}
 
   .w{display:inline-block;white-space:nowrap}
   .ch{display:inline-block;transition:transform .55s var(--ease);will-change:transform}
@@ -1121,12 +1131,100 @@
       background:color-mix(in srgb,var(--raise) 60%,transparent)}
   .leverage p{margin:0;font-size:16.5px;line-height:1.5;color:var(--fg)}
   .leverage b{font-family:var(--display);text-transform:uppercase;letter-spacing:.03em;font-size:15px;display:block;margin-bottom:8px}
+
+  /* ================= v6: the journey =================
+     Rhythm: film · colour field · paper · dark · paper · dark · paper · dark · film · dark.
+     Paper sections read the --lt-* set, so the accent has to deepen to stay legible. */
+  .light{--accent-t:var(--accent)}
+  .light .planrow .amt2 small{color:var(--muted)}
+  .kick{font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--accent-t);margin:0 0 14px}
+  .light .say,.pfield .say{max-width:58ch;color:var(--muted);font-size:clamp(16px,1.4vw,18px);margin:14px 0 clamp(24px,3vw,36px)}
+  .light .ah,.pfield .ah{font-size:clamp(34px,4.6vw,70px)}
+
+  /* 02 personas: the one full colour field, and the card each ad lands on */
+  :root{--pf:linear-gradient(135deg,#1A0A40 0%,#35128A 55%,#6E2CF4 100%)}
+  [data-theme="sand"]{--pf:var(--bridge)}
+  [data-theme="signal"]{--pf:var(--bridge)}
+  .pfield{background:var(--pf);color:var(--film-fg);--fg:var(--film-fg);--muted:var(--film-muted);--faint:var(--film-faint);--line:color-mix(in srgb,#fff 22%,transparent);--raise:var(--film-raise)}
+  .pfield .kick{color:color-mix(in srgb,#fff 72%,transparent)}
+  .pfield .ah .it{color:#fff}
+  [data-theme="signal"] .pfield .ah .it{color:#FFD400}
+  [data-theme="sand"] .pfield .ah .it{color:#FFB84D}
+  .personas{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(14px,1.8vw,22px);margin-top:clamp(28px,3.4vw,46px)}
+  .personas article{position:relative;padding:clamp(24px,2.4vw,32px);background:color-mix(in srgb,#fff 8%,transparent);border:1px solid var(--line);
+     clip-path:polygon(var(--ch) 0,100% 0,100% calc(100% - var(--ch)),calc(100% - var(--ch)) 100%,0 100%,0 var(--ch));transition:transform .3s var(--ease),background .3s var(--ease)}
+  .personas article:hover{transform:translateY(-3px);background:color-mix(in srgb,#fff 13%,transparent)}
+  .personas .n{display:block;font-family:var(--display);font-size:clamp(40px,4vw,58px);line-height:.85;color:color-mix(in srgb,#fff 38%,transparent);margin-bottom:18px}
+  .personas p{margin:0;font-size:clamp(17px,1.5vw,20px);line-height:1.4;color:var(--fg)}
+  .personas b{font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.02em;display:block;font-size:1.12em;margin-bottom:6px}
+  .converge{margin:clamp(28px,3vw,40px) 0 0;max-width:46ch;font-family:var(--serif);font-style:italic;font-size:clamp(21px,2.3vw,30px);line-height:1.3;color:var(--fg)}
+  .converge b{font-family:var(--body);font-style:normal;font-weight:700;font-size:.72em;display:block;margin-top:10px;letter-spacing:.01em}
+
+  /* 03 steps */
+  .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(20px,3vw,44px);margin-top:clamp(30px,3.6vw,52px)}
+  .steps article{position:relative;padding-top:24px;border-top:1px solid var(--line)}
+  .steps article::before{content:"";position:absolute;top:-2px;left:0;width:56px;height:3px;background:var(--grad)}
+  .steps .n{display:block;font-family:var(--display);font-size:clamp(64px,7vw,112px);line-height:.82;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+  .steps .who{display:inline-block;margin-top:16px;font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent-t)}
+  .steps h3{font-family:var(--display);font-weight:400;text-transform:uppercase;font-size:clamp(21px,2vw,28px);letter-spacing:.02em;line-height:1.05;margin:8px 0 10px}
+  .steps p{margin:0;color:var(--muted);font-size:16px;line-height:1.55;max-width:38ch}
+
+  /* 04 stage headers */
+  .stagehd{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 14px;margin:clamp(34px,4vw,56px) 0 16px;padding-top:18px;border-top:1px solid var(--line)}
+  .artsec .say + .stagehd{margin-top:0}
+  .stagehd span{font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--accent-t)}
+  .stagehd b{font-family:var(--display);font-weight:400;text-transform:uppercase;font-size:clamp(20px,2vw,28px);letter-spacing:.02em}
+  .stagehd em{font-style:normal;font-family:var(--mono);font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--faint)}
+  .strip{margin:0;padding:18px 22px;border:1px solid var(--line);border-left:3px solid var(--accent-t);font-size:16.5px;color:var(--fg);background:color-mix(in srgb,var(--raise) 60%,transparent)}
+
+  /* 05 outcome on paper */
+  #outcome .maths{margin-left:0;margin-right:0;max-width:none;margin-top:clamp(26px,3vw,38px)}
+
+  /* 06 deliverables */
+  .deliv3{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:clamp(24px,3vw,36px);border:1px solid var(--line)}
+  .deliv3 article{padding:24px 24px 26px;border-right:1px solid var(--line)}
+  .deliv3 article:last-child{border-right:0}
+  .deliv3 .n{font-family:var(--display);font-size:28px;line-height:1;color:var(--accent-t)}
+  .deliv3 h3{font-family:var(--display);font-weight:400;text-transform:uppercase;font-size:18px;letter-spacing:.03em;margin:12px 0 8px}
+  .deliv3 p{margin:0;font-size:15px;color:var(--muted);line-height:1.5}
+
+  /* 07 proof: bigger quotes */
+  .proof .quotecard{padding:clamp(28px,3vw,40px)}
+  .proof .quotecard q{font-size:clamp(19px,1.7vw,24px);line-height:1.42}
+
+  /* 08 risk cards: four across, no longer a list */
+  .honest .risks{margin-top:0}
+  .findings.f3{grid-template-columns:repeat(3,1fr)}
+  @media(max-width:900px){.findings.f3{grid-template-columns:1fr}}
+  .final-film .lede{max-width:44ch}
+
+  /* 09 price card on the film */
+  .pricecard{margin-top:24px;max-width:560px;background:color-mix(in srgb,var(--film-bg) 78%,transparent);backdrop-filter:blur(6px)}
+  .pricecard li{font-size:15px}
+  .pricecard .gst{font-family:var(--mono);font-size:.32em;letter-spacing:.08em;vertical-align:middle;color:var(--muted)}
+
+  /* sticky mobile CTA: only once the hero button has gone, never over the close */
+  .sticky{position:fixed;left:12px;right:12px;bottom:12px;z-index:70;display:none;align-items:center;justify-content:space-between;gap:12px;
+     padding:10px 10px 10px 16px;background:color-mix(in srgb,var(--film-bg) 92%,transparent);color:var(--film-fg);border:1px solid var(--film-line);backdrop-filter:blur(10px);
+     transform:translateY(140%);transition:transform .35s var(--ease)}
+  .sticky span{font-family:var(--mono);font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--film-muted)}
+  .sticky span b{font-family:var(--display);font-weight:400;font-size:20px;color:var(--film-fg);letter-spacing:0;margin-right:2px}
+  .sticky .btn{padding:12px 16px;font-size:13px}
+  .sticky.on{transform:none}
+  @media(max-width:760px){.sticky{display:flex}footer.lp{padding-bottom:84px}}
+
+  @media(max-width:900px){
+    .personas,.steps,.deliv3{grid-template-columns:1fr}
+    .deliv3 article{border-right:0;border-bottom:1px solid var(--line)}
+    .deliv3 article:last-child{border-bottom:0}
+    .steps{gap:30px}
+  }
 </style>
 
 <header id="hdr">
   <div class="wrap nav">
-    <a class="brand" href="#top">AutoConvert <b>Digital</b></a>
-    <a class="btn" href="/audit">Get your $97 audit →</a>
+    <span class="brand">AutoConvert <b>Digital</b></span>
+    <a class="btn" href="#buy" data-checkout>Get your $97 audit →</a>
     <span class="navsep" aria-hidden="true">|</span>
     <button class="tgl" id="tgl" type="button" aria-label="Change colour theme">
       <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3.6v7.2"/><path d="M7.4 6.4a7 7 0 1 0 9.2 0"/></svg>
@@ -1136,34 +1234,63 @@
 
 <main id="top">
 
-<!-- 01 HERO ................................................. -->
+<!-- 01 HOOK ................................................. -->
 <section class="hero dark env ahero" id="hero" style="--env:url(assets/env-audit-lab.jpg)">
   <div class="envbg" aria-hidden="true"></div>
   <div class="wrap inner rv">
     <div>
       <p class="fineprint" style="margin:0 0 18px">The Meta Campaign Audit</p>
       <h1 class="ah">More revenue,<span class="it">same ad spend.</span></h1>
-      <p class="lede" style="max-width:52ch">A full review of your Meta ads, your offer and your landing page, scored against the first three stages of our Click-to-Close Circuit&trade;. Done by me, not a tool and not a junior.</p>
-      <p class="lede" style="max-width:52ch;margin-top:12px">You get a scored report, a recorded walkthrough of your own account, and an action plan you keep. No call to sit through, nothing to sign.</p>
-      <div class="price-line"><span class="amt">$97</span><span class="was">Foundation price &middot; rising to $297</span></div>
-      <div class="btns" style="margin-top:22px"><a class="btn" href="#start">Get your audit &middot; $97 &rarr;</a></div>
+      <p class="lede" style="max-width:52ch">A full review of your Meta ads, your landing page and how your leads get captured, scored out of 100 against the first three stages of the Click-to-Close Circuit&trade;. Done by me, not a junior.</p>
+      <div class="price-line"><span class="amt">$97</span><span class="was">+ GST &middot; Foundation price until 31 Dec</span></div>
+      <div class="btns" style="margin-top:22px" id="heroCta"><a class="btn" href="#buy" data-checkout>Get your audit &middot; $97 &rarr;</a></div>
       <p class="fineprint">48-hour turnaround &middot; No sales call &middot; Money back guarantee</p>
     </div>
     <div class="quotecard">
       <q>We saw an immediate increase in results; more leads being delivered, the cost per lead decreasing, amazing quality of creative, and well-thought-out copy that converts.</q>
-      <div class="who">Dav Lipasaar &middot; Director, SAAR Media &amp; Entertainment</div>
+      <div class="who">Dav Lipasaar &middot; Director, SAAR Media &amp; Entertainment &middot; from my previous business</div>
     </div>
   </div>
 </section>
 
 <div class="marq" aria-hidden="true"><div class="run" id="marqA"></div></div>
 
-<!-- 03 ARTEFACT ONE: THE AD ACCOUNT ......................... -->
-<section class="dark artsec">
+<!-- 02 PROBLEM: ONE OF THREE ................................ -->
+<section class="pfield" id="you">
   <div class="wrap rv">
-    <div class="head"><span class="step">01 &middot; What I look at</span></div>
-    <h2 class="ah">Your ad account.</h2>
-    <p class="say">Five categories, scored. Here is the kind of thing that turns up in the first twenty minutes, on an account that looks fine from the dashboard.</p>
+    <p class="kick">Who this is for</p>
+    <h2 class="ah">You&rsquo;re probably<span class="it">one of three.</span></h2>
+    <div class="personas">
+      <article><span class="n">01</span><p><b>You set it up yourself</b> and haven&rsquo;t looked at it properly in months.</p></article>
+      <article><span class="n">02</span><p><b>Someone else runs it</b> and you&rsquo;re not really across what they&rsquo;re doing.</p></article>
+      <article><span class="n">03</span><p><b>You&rsquo;ve got a person or a team on it</b> and you want to know if it&rsquo;s built to win or just to spend.</p></article>
+    </div>
+    <p class="converge">Whichever one you are, you&rsquo;re paying for the same ads and you can&rsquo;t see where the money is going. <b>That&rsquo;s what this fixes.</b></p>
+  </div>
+</section>
+
+<!-- 03 HOW IT WORKS ......................................... -->
+<section class="light" id="how">
+  <div class="wrap rv">
+    <p class="kick">How it works</p>
+    <h2 class="ah">Three steps.<span class="it">No call.</span></h2>
+    <div class="steps">
+      <article><span class="n">01</span><span class="who">You</span><h3>Pay and point me at it</h3><p>Pay the $97, fill in a short intake about your business, your numbers and the campaign, and give me read-only access to your Meta ad account. I can look, and that&rsquo;s all.</p></article>
+      <article><span class="n">02</span><span class="who">Me</span><h3>I go through it</h3><p>Your ad account, your landing page and how the lead gets captured. All ten categories, scored against the same checklist every time. About an hour and a half of the same work I do for build clients.</p></article>
+      <article><span class="n">03</span><span class="who">Within 48 hours</span><h3>It lands in your inbox</h3><p>Your scored report, a recorded walkthrough of your own account, and the three biggest fixes ranked by what they&rsquo;re costing you. The clock starts when your access comes through.</p></article>
+    </div>
+    <div class="btns" style="margin-top:clamp(30px,3.4vw,44px)"><a class="btn" href="#buy" data-checkout>Get your audit &middot; $97 &rarr;</a></div>
+  </div>
+</section>
+
+<!-- 04 WHAT I LOOK AT ....................................... -->
+<section class="dark artsec" id="look">
+  <div class="wrap rv">
+    <p class="kick">What I look at</p>
+    <h2 class="ah">Ten categories.<span class="it">One score out of 100.</span></h2>
+    <p class="say">Five in your ad account, four on your landing page, and one on how the lead gets captured. Here&rsquo;s the kind of thing that turns up on an account that looks fine from the dashboard.</p>
+
+    <div class="stagehd"><span>Stage 01</span><b>Your ad account</b><em>5 categories</em></div>
     <div class="art">
       <div class="chrome"><i></i><i></i><i></i><span>Ads Manager &middot; Campaigns &middot; last 30 days</span><span class="tag">Example account</span></div>
       <div class="body artscroll">
@@ -1174,30 +1301,20 @@
             <tr class="live flag"><td class="nm"><span class="dot"></span>Winter promo &mdash; interests</td><td>Leads</td><td>$25/day</td><td>18 leads</td><td>$41.22</td><td>$742</td></tr>
             <tr class="live flag"><td class="nm"><span class="dot"></span>Winter promo &mdash; lookalike 1%</td><td>Leads</td><td>$25/day</td><td>21 leads</td><td>$35.10</td><td>$737</td></tr>
             <tr class="live"><td class="nm"><span class="dot"></span>Retargeting &mdash; 180d</td><td>Leads</td><td>$10/day</td><td>29 leads</td><td>$10.24</td><td>$297</td></tr>
-            <tr class="off flag"><td class="nm"><span class="dot"></span>Brand awareness (2024)</td><td>Awareness</td><td>$12/day</td><td>&mdash;</td><td>&mdash;</td><td>$348</td></tr>
           </tbody>
         </table>
         <span class="pin" style="left:16px;top:52px">1</span>
         <span class="pin" style="left:16px;top:100px">2</span>
         <span class="pin" style="right:24px;top:100px">3</span>
-        <span class="pin" style="left:16px;top:196px">4</span>
       </div>
     </div>
-    <div class="findings">
+    <div class="findings f3">
       <div class="finding"><b>1</b><p>Top campaign is optimising for <strong>Traffic</strong>, not Leads. Meta is buying you the cheapest clickers, not buyers.<em>$1,182 spent &middot; 0 leads attributed</em></p></div>
       <div class="finding"><b>2</b><p>Two ad sets are targeting the same people. Audience overlap is <strong>34%</strong>, so you are bidding against yourself in the same auction.<em>Inflating your own cost per lead</em></p></div>
       <div class="finding"><b>3</b><p>Cost per lead is <strong>$41.22</strong> against a $22.60 benchmark for this spend tier and objective.<em>Meta&rsquo;s own benchmark data, matched on spend</em></p></div>
-      <div class="finding"><b>4</b><p>A paused 2024 campaign is still drawing budget and has produced nothing for eleven months.<em>$348 in the last 30 days</em></p></div>
     </div>
-  </div>
-</section>
 
-<!-- 04 ARTEFACT TWO: THE LANDING PAGE ....................... -->
-<section class="dark artsec">
-  <div class="wrap rv">
-    <div class="head"><span class="step">02 &middot; What I look at</span></div>
-    <h2 class="ah">Your landing page.</h2>
-    <p class="say">Four categories, scored. Reviewed the way your customer arrives: on a phone, on mobile data, straight off the ad.</p>
+    <div class="stagehd"><span>Stage 02</span><b>Your landing page</b><em>4 categories &middot; checked on a phone, on mobile data, straight off the ad</em></div>
     <div class="twocol">
       <div class="art">
         <div class="chrome"><i></i><i></i><i></i><span>yourbusiness.com.au/winter-offer</span><span class="tag">Example page</span></div>
@@ -1217,35 +1334,49 @@
         </div>
       </div>
       <div class="findings" style="grid-template-columns:1fr;margin-top:0;align-content:start">
-        <div class="finding"><b>1</b><p>Your ad promises <strong>&ldquo;$99 winter service&rdquo;</strong>. The page says &ldquo;Quality you can trust since 1998&rdquo;. Different promise, different words.<em>Message match &middot; the biggest single leak we find</em></p></div>
+        <div class="finding"><b>1</b><p>Your ad promises <strong>&ldquo;$99 winter service&rdquo;</strong>. The page says &ldquo;Quality you can trust since 1998&rdquo;. Different promise, different words.<em>Message match &middot; the first thing I check</em></p></div>
         <div class="finding"><b>2</b><p>The only call to action sits <strong>below the fold on mobile</strong>, where 78% of your traffic arrives.<em>They have to hunt for the thing you paid for</em></p></div>
-        <div class="finding"><b>3</b><p><strong>Eleven form fields</strong> on a first enquiry. Every one past the fourth is a reason to leave.<em>Cutting to four typically lifts submissions sharply</em></p></div>
+        <div class="finding"><b>3</b><p><strong>Eleven form fields</strong> on a first enquiry. Every one past the fourth is a reason to leave.<em>Fewer fields, fewer reasons to leave</em></p></div>
         <div class="finding"><b>4</b><p>The page takes <strong>5.9 seconds</strong> to load on a phone on mobile data.<em>Checked the way your customer arrives</em></p></div>
       </div>
+    </div>
+
+    <div class="stagehd"><span>Stage 03</span><b>Lead capture</b><em>1 category</em></div>
+    <p class="strip">Your forms, your pixel and Conversions API, and whether each lead lands somewhere a person will actually see it.</p>
+  </div>
+</section>
+
+<!-- 05 THE OUTCOME .......................................... -->
+<section class="light" id="outcome">
+  <div class="wrap rv">
+    <p class="kick">The outcome</p>
+    <h2 class="ah">You&rsquo;ll know<span class="it">what to fix first.</span></h2>
+    <p class="say">Every one of these is money you&rsquo;ve already paid for. It doesn&rsquo;t cost more ad spend to fix. It costs knowing which one to fix first.</p>
+    <div class="plan" style="margin-top:clamp(24px,3vw,38px)">
+      <div class="planrow"><div class="rank">01</div><div><h4>Switch the top campaign off Traffic</h4><p>Rebuild it as a Leads campaign optimising for the event that matters. The spend is already there; it is buying the wrong thing.</p></div><div class="amt2">$1,182<small>per month, redirected</small></div></div>
+      <div class="planrow"><div class="rank">02</div><div><h4>Match the page headline to the ad</h4><p>One line. Same offer, same words, same price. Costs nothing and it is the biggest leak on the page.</p></div><div class="amt2">~31<small>enquiries / month at current traffic</small></div></div>
+      <div class="planrow"><div class="rank">03</div><div><h4>Cut the form from eleven fields to four</h4><p>Name, phone, suburb, job type. Everything else you can ask on the call.</p></div><div class="amt2">7<small>reasons to leave, removed</small></div></div>
+    </div>
+    <p class="stagenote" style="margin-top:16px">Dollar figures come from your own account and the two numbers on the intake form &middot; example shown</p>
+    <div class="maths">
+      <div><b>$3,000</b><span>a month on Meta</span></div>
+      <div><b class="hi">$1,182</b><span>of it buying clicks, not leads</span></div>
+      <div><b>$14,184</b><span>a year at that rate</span></div>
+      <div><b>$97</b><span>to find it</span></div>
+    </div>
+    <div class="leverage">
+      <p><b>It changes the conversation you&rsquo;re already having</b>
+      Whether that&rsquo;s with your agency, your freelancer, or the person in your business who &ldquo;does the marketing&rdquo;, you&rsquo;ll be pointing at a number instead of a feeling.</p>
     </div>
   </div>
 </section>
 
-<!-- 04b THE CONFLICT OF INTEREST, NAMED -->
-<section class="dark honest">
-  <div class="wrap rv">
-    <h2 class="ah">Yes, I also<span class="it">sell the fix.</span></h2>
-    <p class="say" style="max-width:56ch">Which is exactly why you should be sceptical of an audit from me. So here is how you know this one isn&rsquo;t a sales document dressed up as a diagnosis.</p>
-    <ul>
-      <li><b>01</b><span>The checklist is fixed. The same nine categories, scored the same way, on every account that comes through, whether you ever speak to me again or not.</span></li>
-      <li><b>02</b><span>The three fixes come out ranked by what they are costing you, not by what I would charge to do them.</span></li>
-      <li><b>03</b><span>Two of the three are usually things you or your current provider can action in an afternoon, without me anywhere near it.</span></li>
-      <li><b>04</b><span>The report is written to be handed to someone else. That is the point of it, not a concession.</span></li>
-    </ul>
-  </div>
-</section>
-
-<!-- 05 WHAT LANDS IN YOUR INBOX ............................. -->
+<!-- 06 WHAT'S INCLUDED ...................................... -->
 <section class="dark artsec" id="included">
   <div class="wrap rv">
-    <div class="head"><span class="step">03 &middot; What you get</span></div>
+    <p class="kick">What you get</p>
     <h2 class="ah">What lands<span class="it">in your inbox.</span></h2>
-    <p class="say">Three things, in 48 hours. The same format every time, which is what keeps a proper review at $97 instead of $900.</p>
+    <p class="say">Three things, in 48 hours, in the same format every time. That&rsquo;s what keeps a proper review at $97.</p>
     <div class="twocol">
       <div class="scard" id="scard"></div>
       <div>
@@ -1260,98 +1391,61 @@
         <p class="stagenote" style="margin-top:14px">Watch it twice. Send it to whoever runs your ads. It&rsquo;s yours.</p>
       </div>
     </div>
-    <div class="plan" style="margin-top:clamp(24px,3vw,38px)">
-      <div class="planrow"><div class="rank">01</div><div><h4>Switch the top campaign off Traffic</h4><p>Rebuild it as a Leads campaign optimising for the event that matters. The spend is already there; it is buying the wrong thing.</p></div><div class="amt2">$1,182<small>per month, redirected</small></div></div>
-      <div class="planrow"><div class="rank">02</div><div><h4>Match the page headline to the ad</h4><p>One line. Same offer, same words, same price. Costs nothing and it is the biggest leak on the page.</p></div><div class="amt2">~31<small>enquiries / month at current traffic</small></div></div>
-      <div class="planrow"><div class="rank">03</div><div><h4>Cut the form from eleven fields to four</h4><p>Name, phone, suburb, job type. Everything else you can ask on the call.</p></div><div class="amt2">+120%<small>documented lift, 11 fields to 4</small></div></div>
+    <div class="deliv3">
+      <article><span class="n">01</span><h3>A scored report</h3><p>Ten categories, each out of 10, with the reasoning behind every mark.</p></article>
+      <article><span class="n">02</span><h3>A recorded walkthrough</h3><p>Me on screen inside your own account. Yours to keep and send to whoever runs your ads.</p></article>
+      <article><span class="n">03</span><h3>An action plan</h3><p>The three biggest fixes, in order, costed against your own numbers.</p></article>
     </div>
-    <p class="stagenote" style="margin-top:16px">Dollar figures come from your own account and the two numbers on the intake form &middot; example shown</p>
-    <div class="leverage">
-      <p><b>It changes the conversation you&rsquo;re already having</b>
-      Whether that is with your agency, your freelancer, or the person in your business who &ldquo;does the marketing&rdquo;, you will be pointing at a number instead of a feeling. Most people send the recording on the same day they get it.</p>
-    </div>
+    <div class="btns" style="margin-top:clamp(28px,3vw,40px)"><a class="btn" href="#buy" data-checkout>Get your audit &middot; $97 &rarr;</a></div>
   </div>
 </section>
 
-<!-- 06 THE CONTRAST ......................................... -->
-<section class="dark">
+<!-- 07 PROOF ................................................ -->
+<section class="light" id="proof">
   <div class="wrap rv">
-    <h2 class="ah">That took twenty minutes.<span class="it">Yours has been running for months.</span></h2>
-    <div class="contrast">
-      <div class="them">
-        <h3>What you just watched</h3>
-        <ul id="cThem"></ul>
-      </div>
-      <div class="now">
-        <h3>What&rsquo;s running in yours right now</h3>
-        <ul id="cNow"></ul>
-      </div>
-    </div>
-    <p class="contrast kicker" style="max-width:62ch">Every one of those is money you have already paid for. It does not cost more ad spend to fix. It costs knowing which one to fix first.</p>
-  </div>
-</section>
-
-<!-- 07 THE PUSH ............................................. -->
-<section class="dark field push" id="start">
-  <div class="wrap rv">
-    <h2 class="ah">The best $97<span class="it">you&rsquo;ll spend this month.</span></h2>
-    <p class="say" style="max-width:58ch;margin-inline:auto">Run the numbers on your own spend. This is the most common single finding, on the most common budget.</p>
-    <div class="maths">
-      <div><b>$3,000</b><span>a month on Meta</span></div>
-      <div><b>$36,000</b><span>a year through the account</span></div>
-      <div><b class="hi">$12,000</b><span>going to the wrong campaign objective</span></div>
-      <div><b>$97</b><span>to find out which third</span></div>
-    </div>
-    <p class="audition">Think of it as a paid trial of how I work. You are not choosing a provider today. You are spending $97 to watch one work on your account for ninety minutes, and then deciding whether you want more of that.</p>
-    <div class="stack">
-      <ul>
-        <li><span class="tk"><svg viewBox="0 0 24 24"><path d="M4 12.5l5.5 5.5L20 7"/></svg></span><span><b>A scored report</b> &mdash; nine categories, each out of 100, with the reasoning behind every mark.</span></li>
-        <li><span class="tk"><svg viewBox="0 0 24 24"><path d="M4 12.5l5.5 5.5L20 7"/></svg></span><span><b>A recorded walkthrough</b> &mdash; me on screen inside your own account, yours to keep and share.</span></li>
-        <li><span class="tk"><svg viewBox="0 0 24 24"><path d="M4 12.5l5.5 5.5L20 7"/></svg></span><span><b>An action plan</b> &mdash; the three biggest fixes, in order, costed against your own numbers.</span></li>
-        <li><span class="tk"><svg viewBox="0 0 24 24"><path d="M4 12.5l5.5 5.5L20 7"/></svg></span><span><b>An hour and a half</b> of the same work I do for build clients.</span></li>
-      </ul>
-      <div class="rule"><b>$97</b><em>Foundation price &middot; rising to $297</em>
-        <small>And if you go on to build with me, the $97 comes off your invoice in full.</small></div>
-    </div>
-    <div class="btns" style="margin-top:32px"><a class="btn" href="#start">Get your audit &middot; $97 &rarr;</a></div>
-    <p class="fineprint">48-hour turnaround &middot; No sales call &middot; Money back guarantee</p>
-  </div>
-</section>
-
-<!-- 08 PROOF ................................................ -->
-<section class="dark">
-  <div class="wrap rv">
-    <h2 class="ah">Get a<span class="it">second opinion.</span></h2>
-    <p class="say" style="max-width:62ch">Before AutoConvert I ran campaigns in 10+ niches and secured high-value leads &mdash; home-owners, mortgage enquiries, cosmetic procedures &mdash; at $8 to $9 a lead. Ten years inside other people&rsquo;s ad accounts is what the checklist is built from.</p>
-    <div class="twocol" style="margin-top:clamp(24px,3vw,38px)">
-      <div class="quotecard"><q>Luke&rsquo;s ability to understand our business and speak with our voice is his greatest asset and perhaps the biggest problem we&rsquo;ve had in the past with previous marketing efforts.</q><div class="who">Peter Giannakis &middot; Director, HG Coffee School</div></div>
+    <p class="kick">Who&rsquo;s doing it</p>
+    <h2 class="ah">10+ years<span class="it">inside other people&rsquo;s ad accounts.</span></h2>
+    <p class="say">Before AutoConvert, at my previous business, I ran Meta campaigns for service businesses in more than ten niches: trades, property, cosmetic clinics, hospitality training. That&rsquo;s what the checklist is built from.</p>
+    <div class="twocol proof">
+      <div class="quotecard"><q>Luke&rsquo;s ability to understand our business and speak with our voice is his greatest asset and perhaps the biggest problem we&rsquo;ve had in the past with previous marketing efforts.</q><div class="who">Peter Giannakis &middot; Director, HG Coffee School &middot; from my previous business</div></div>
       <div class="quotecard"><q>Leads used to get followed up whenever I found a spare minute between clients. Luke helped streamline our enquiries and lead capture so everything is in one place and tracked from start to finish. In this game, the fastest salesman gets the deal.</q><div class="who">Sam Roberts &middot; Principal Dealer, Rev&eacute; Auto Haus</div></div>
     </div>
   </div>
 </section>
 
-<!-- 09 WHAT COULD GO WRONG .................................. -->
-<section class="dark">
+<!-- 08 RISK REVERSAL ........................................ -->
+<section class="dark honest" id="straight">
   <div class="wrap rv">
-    <h2 class="ah">What could<span class="it">go wrong?</span></h2>
+    <p class="kick">Keeping it straight</p>
+    <h2 class="ah">Yes, I also<span class="it">sell the fix.</span></h2>
+    <p class="say" style="max-width:56ch">So you should be sceptical of an audit from me. Here&rsquo;s what keeps this one straight.</p>
     <div class="risks" id="risks"></div>
   </div>
 </section>
 
-<!-- 10 FINAL CTA ............................................ -->
+<!-- 09 CLOSE ................................................ -->
 <section class="dark final final-film" id="buy">
   <video class="bgvid" src="assets/hf/cta-final.h264.mp4" poster="assets/hf/cta-final-poster.jpg" muted loop playsinline preload="metadata" data-inview aria-hidden="true"></video>
   <div class="fscrim" aria-hidden="true"></div>
   <div class="wrap inner rv"><div>
-    <h2 class="ah">Get your<span class="it">audit.</span></h2>
-    <p class="lede">You are going to spend the same on Meta next month whether you know where your budget is going or not. The only question is whether you get the result you&rsquo;re after.</p>
-    <p class="lede" style="margin-top:12px">$97 and two days answers that. You keep the report either way.</p>
-    <div class="btns" style="margin-top:26px"><a class="btn" href="#start">Get your audit &middot; $97 &rarr;</a></div>
+    <h2 class="ah">The best $97<span class="it">you&rsquo;ll spend this month.</span></h2>
+    <p class="lede">You&rsquo;re going to spend the same on Meta next month whether you know where it&rsquo;s going or not. $97 and two days tells you. You keep the report either way.</p>
+    <div class="stack pricecard">
+      <ul>
+        <li><span class="tk"><svg viewBox="0 0 24 24"><path d="M4 12.5l5.5 5.5L20 7"/></svg></span><span><b>Scored report</b> &mdash; ten categories, out of 100</span></li>
+        <li><span class="tk"><svg viewBox="0 0 24 24"><path d="M4 12.5l5.5 5.5L20 7"/></svg></span><span><b>Recorded walkthrough</b> of your own account</span></li>
+        <li><span class="tk"><svg viewBox="0 0 24 24"><path d="M4 12.5l5.5 5.5L20 7"/></svg></span><span><b>Action plan</b> &mdash; three fixes, ranked and costed</span></li>
+        <li><span class="tk"><svg viewBox="0 0 24 24"><path d="M4 12.5l5.5 5.5L20 7"/></svg></span><span><b>Money back</b> if it doesn&rsquo;t give you steps you can act on</span></li>
+      </ul>
+      <div class="rule"><b>$97 <span class="gst">+ GST</span></b><em>Foundation price until 31 December 2026 &middot; $297 from January</em>
+        <small>If you go on to build with me, the $97 comes off your invoice in full.</small></div>
+    </div>
+    <div class="btns" style="margin-top:26px"><a class="btn" href="#buy" data-checkout>Get your audit &middot; $97 &rarr;</a></div>
     <p class="fineprint">48-hour turnaround &middot; No sales call &middot; Money back guarantee</p>
   </div></div>
 </section>
 
-<!-- FAQ ..................................................... -->
+<!-- 10 FAQ .................................................. -->
 <section class="dark faqsec" id="faq">
   <div class="grad" aria-hidden="true"></div>
   <div class="wrap faqwrap rv">
@@ -1362,23 +1456,27 @@
 
 </main>
 
-<footer>
+<div class="sticky" id="sticky" aria-hidden="true">
+  <span><b>$97</b> + GST &middot; 48 hrs &middot; money back</span>
+  <a class="btn" href="#buy" data-checkout tabindex="-1">Get your audit &rarr;</a>
+</div>
+
+<footer class="lp">
   <div class="wrap">
     <div class="frow">
       <div>
         <div class="brand" style="font-size:20px">AutoConvert <b>Digital</b></div>
         <p class="fineprint" style="margin-top:8px">Marketing that just works.</p>
       </div>
-      <div style="margin-left:auto" class="fineprint">Gold Coast, Queensland · Working with businesses Australia-wide<br>ABN 58 593 675 977</div>
-    </div>
-    <div class="frow crew">
-      <div><button class="av" type="button" data-full="assets/people/luke-avatar-full.jpg" aria-label="View full photo of Luke Wade"><img src="assets/people/luke-avatar.jpg" alt="Luke Wade" loading="lazy"></button><span class="nm"><b>Luke Wade</b>Chief Conversion Officer</span></div>
-      <div><button class="av" type="button" data-full="assets/people/oskar-full.jpg" aria-label="View full photo of Oskar"><img src="assets/people/oskar.jpg" alt="Oskar" loading="lazy"></button><span class="nm"><b>Oskar</b>Chief Meowketing Officer</span></div>
-      <div><button class="av" type="button" data-full="assets/people/luna-full.jpg" aria-label="View full photo of Luna"><img src="assets/people/luna.jpg" alt="Luna" loading="lazy"></button><span class="nm"><b>Luna</b>Head of Purrformance</span></div>
+      <div style="margin-left:auto" class="fineprint">Gold Coast, Queensland · Working with businesses Australia-wide<br>ABN 58 593 675 977 · <a href="mailto:sales@autoconvertdigital.com.au">sales@autoconvertdigital.com.au</a></div>
     </div>
     <div class="frow flinks">
-      <div><a href="/audit">The $97 audit</a><a href="/strategy-call">Apply for a strategy call</a><a href="#">Contact</a><a href="#">Privacy</a><a href="#">Terms</a><a href="#">Refund policy</a></div>
-      <div style="margin-left:auto"><a href="https://share.google/fACTnaPU91Maqthym" target="_blank" rel="noopener">Google</a><a href="https://www.facebook.com/autoconvertdigital" target="_blank" rel="noopener">Facebook</a><a href="https://www.instagram.com/autoconvertdigital/" target="_blank" rel="noopener">Instagram</a><a href="https://www.linkedin.com/in/wadeluke/" target="_blank" rel="noopener">LinkedIn</a></div>
+      <div><a href="/privacy">Privacy policy</a><a href="/terms">Terms</a><a href="/refunds">Refund policy</a><a href="/terms#disclaimer">Disclaimers</a></div>
+      <div style="margin-left:auto" class="quiet">Already know you want it built? <a href="/strategy-call">Apply for a strategy call&nbsp;&rarr;</a></div>
+    </div>
+    <div class="frow legal">
+      <p><b>Results vary.</b> Any figures on this page, including the worked example, the sample scorecard and what past clients say, show what happened for one business or what is possible. They are not a promise of what you will earn. Your results depend on your offer, your market, your budget and what you do with the findings. The scorecard shown is an example, not a real client. <a href="/terms#disclaimer">Full disclaimers</a>.</p>
+      <p>This site is not part of the Facebook or Instagram websites or Meta Platforms, Inc., and is not endorsed by Meta in any way. Facebook, Instagram and Meta are trademarks of Meta Platforms, Inc. Google is a trademark of Google LLC.</p>
     </div>
     <div class="frow" style="flex-direction:column;gap:14px">
       <p class="incl" style="margin:0">∞ 🏳️‍🌈 Neurodivergent-owned. Hyperfocus included at no extra cost. LGBTQIA+ inclusive.</p>
@@ -1389,48 +1487,48 @@
         </span>
         <p class="ack" style="margin:0">AutoConvert Digital acknowledges the Traditional Custodians of the land on which we work, the Kombumerri families of the <a href="https://www.yugambeh.com/">Yugambeh Language Region</a>, and the Traditional Custodians of the lands where our clients live and work. We pay our respects to Elders past and present.</p>
       </div>
-      <p class="sources" style="margin:0">© 2026 AutoConvert Digital · Sources: ¹ Unbounce, 2024 · ² Harvard Business Review, 2011 · ³ NSW Behavioural Insights Unit, 2019 · ⁴ Harvard Business Review, 2014</p>
+      <p class="sources" style="margin:0 0 40px">© 2026 AutoConvert Digital · Sources: ¹ Unbounce, 2024 · ² Harvard Business Review, 2011 · ³ NSW Behavioural Insights Unit, 2019 · ⁴ Harvard Business Review, 2014</p>
     </div>
-    <div class="bigmark">AutoConvert</div>
   </div>
 </footer>
 
 <script>
+/* ── CHECKOUT ─────────────────────────────────────────────────────────
+   Paste the GHL order form URL between the quotes. Every "Get your audit"
+   button on the page picks it up. Left empty, the buttons scroll to the
+   offer section instead. */
+const CHECKOUT_URL = "";
+if(CHECKOUT_URL) document.querySelectorAll("[data-checkout]").forEach(a=>a.href=CHECKOUT_URL);
+
 const reduce=matchMedia("(prefers-reduced-motion:reduce)").matches, E=id=>document.getElementById(id);
 const mk=(ok,t)=>'<li><span class="mk"><svg viewBox="0 0 24 24"><path d="'+(ok?"M4 12.5l5.5 5.5L20 7":"M6 6l12 12M18 6L6 18")+'"/></svg></span><span>'+t+'</span></li>';
 
-/* scorecard */
-const AD=[["Account structure & health",71],["Targeting & audience",48],["Creative & offer",62],["Tracking & data quality",34],["Performance vs benchmark",55]];
-const PG=[["Message match",39],["Trust & credibility",66],["Offer & call to action",52],["Speed, mobile & technical",74]];
-const rows=a=>a.map(([k,v])=>'<div class="row"><em>'+k+'</em><s>'+v+'</s><div class="bar"><i style="--w:'+v+'%"></i></div></div>').join("");
+/* scorecard: ten categories, each out of 10, adding to the score out of 100 */
+const AD=[["Account structure & health",7],["Targeting & audience",5],["Creative & offer",6],["Tracking & data quality",3],["Performance vs benchmark",6]];
+const PG=[["Message match",4],["Trust & credibility",7],["Offer & call to action",5],["Speed, mobile & technical",7]];
+const LC=[["Lead capture & follow-through",4]];
+const TOTAL=[...AD,...PG,...LC].reduce((t,[,v])=>t+v,0);
+const rows=a=>a.map(([k,v])=>'<div class="row"><em>'+k+'</em><s>'+v+'/10</s><div class="bar"><i style="--w:'+(v*10)+'%"></i></div></div>').join("");
 E("scard").innerHTML='<div class="top"><div class="t">Ads audit scorecard</div><div class="ex">Example</div></div>'+
- '<div class="tot"><b>54</b><span>Out of 100 across stages 01&ndash;03</span></div>'+
- '<h4>Your ad account &middot; 5 categories</h4>'+rows(AD)+
- '<h4>Your landing page &middot; 4 categories</h4>'+rows(PG);
+ '<div class="tot"><b>'+TOTAL+'</b><span>Out of 100 across stages 01&ndash;03</span></div>'+
+ '<h4>Stage 01 &middot; Your ad account</h4>'+rows(AD)+
+ '<h4>Stage 02 &middot; Your landing page</h4>'+rows(PG)+
+ '<h4>Stage 03 &middot; Lead capture</h4>'+rows(LC);
 
-/* the contrast */
-E("cThem").innerHTML=[
- "Every campaign scored, with the reasoning written down",
- "The leak named, and what it is costing this month",
- "The three fixes, ranked, in the order to do them",
- "A recording you can hand to whoever runs your ads"].map(t=>mk(true,t)).join("");
-E("cNow").innerHTML=[
- "A dashboard that looks fine and a bank balance that disagrees",
- "Budget going somewhere, and no way to say where",
- "A page you have not looked at on a phone in months",
- "Another month of spend before anyone checks"].map(t=>mk(false,t)).join("");
 
 /* risk row */
 const ICO={
  lock:'<path d="M6 11h12v9H6z"/><path d="M9 11V8a3 3 0 0 1 6 0v3"/>',
  back:'<path d="M3 12a9 9 0 1 0 3-6.7"/><path d="M3 4v5h5"/>',
  call:'<path d="M3 5l4-2 3 5-2.5 2a12 12 0 0 0 5.5 5.5l2-2.5 5 3-2 4A16 16 0 0 1 3 5z"/><path d="M15 3l6 6M21 3l-6 6"/>',
+ list:'<path d="M9 6h11M9 12h11M9 18h11"/><path d="M4 6h.01M4 12h.01M4 18h.01"/>',
+ rank:'<path d="M4 20V14M10 20V9M16 20V4"/>',
  paid:'<path d="M12 3v18"/><path d="M16.5 7.5C16.5 6 14.5 5 12 5S7.5 6 7.5 8s2 2.6 4.5 3 4.5 1.3 4.5 3.2S14.5 19 12 19s-4.5-1-4.5-2.5"/>'};
 const RISKS=[
- ["lock","I can&rsquo;t change anything","Read-only access to your Meta ad account. I can look, and that is all. Nothing to install, no tracking code, no access to your website or your CRM."],
- ["back","You can have it back","If it doesn&rsquo;t give you useful advice you can act on, email me and I&rsquo;ll refund the $97. One email, no form, no call to talk you out of it. 30 days."],
- ["call","There is no call","No sales call, no discovery call, no &ldquo;quick chat&rdquo;. You get the report and the recording, and what you do next is your business."],
- ["paid","Why it&rsquo;s paid, not free","Free audits are sales calls with a PDF attached. Paying for it is what buys you a real piece of work with no expectation attached. And it comes off the build in full."]];
+ ["list","The checklist is fixed","Same ten categories, scored the same way on every account, whether you ever speak to me again or not."],
+ ["rank","Ranked by what it costs you","The fixes come out in order of what they&rsquo;re costing you, not what I&rsquo;d charge to do them. Most are built so you or your current provider can action them without me."],
+ ["lock","I can&rsquo;t change anything","Read-only access to your ad account. Nothing to install, no access to your website or your CRM."],
+ ["back","You can have it back","If it doesn&rsquo;t give you steps you can act on, or you just want your money back, email me and I&rsquo;ll refund the $97. No form, no call to talk you out of it."]];
 E("risks").innerHTML=RISKS.map(([i,h,p])=>
  '<article><div class="ic"><svg viewBox="0 0 24 24">'+ICO[i]+'</svg></div><h3>'+h+'</h3><p>'+p+'</p></article>').join("");
 
@@ -1438,12 +1536,12 @@ E("risks").innerHTML=RISKS.map(([i,h,p])=>
 const FAQ=[
  ["I already know some of it needs work. What do I get out of this?","The specifics, and the order. Knowing something needs attention and knowing which three things are draining the most spend this month are different problems, and the second one is the one you can act on."],
  ["How do you review my landing page without access?","Your page is public, so I review it the way your customers see it, against a conversion checklist: message match, speed, mobile, the form, the offer, and the proof. Anything that needs behind-the-scenes access gets looked at if we build."],
- ["How long does it take, and is there a call?","You’ll have it within 48 hours, with a recorded video walkthrough. No sales call needed."],
+ ["When does the 48 hours start?","From when your read-only access comes through. I’ll email to confirm it’s landed, and the clock starts then."],
  ["I already have an agency, a CRM, or a website I like. Is this still for me?","Yes. The audit works whoever runs your ads, it’s yours to share with them, and it’ll tell you straight what’s worth keeping."],
  ["Do I have to work with you afterwards?","No. There’s no contract and no call. Most of what’s in the report you or your current provider can action without me."],
  ["Can you just take it over?","Yes, if that’s what you want and your spend supports it. You’d keep full oversight and I’d come to you with updates rather than wait to be asked. That conversation happens after the audit, not before."],
  ["How soon would I see a difference if I act on it?","Some fixes work from day one, like faster replies and clearer pages. New ads and offers usually need a few weeks of testing on real spend before anyone can say what’s working."],
- ["I run Google Ads, not Meta. Can you audit that?","The audit focuses on Meta. If Google is where most of your spend goes, apply for a strategy call and we’ll talk it through. Most of our clients run both."],
+ ["I run Google Ads, not Meta. Can you audit that?","The audit focuses on Meta. If Google is where most of your spend goes, apply for a strategy call and we’ll talk it through."],
  ["I’m a coach, a course creator, or I run an online store. Is this for me?","Not this one. This audit scores a funnel that ends in an enquiry, and yours doesn’t. Coaching and course money is won on the webinar, the application and the follow-up sequence. A store has a cart and a catalogue where the enquiry would be. Same methodology, different scoring. Apply for a strategy call and we’ll look at the right part of your funnel."]];
 const fq=E("faqlist");
 fq.innerHTML=FAQ.map(([q,a],i)=>'<div class="qa'+(i===0?" open":"")+'"><button type="button" aria-expanded="'+(i===0)+'">'+q+'<span class="pm">+</span></button><div class="a"><p>'+a+'</p></div></div>').join("");
@@ -1452,7 +1550,7 @@ fq.querySelectorAll(".qa").forEach(qa=>{const b=qa.querySelector("button"),a=qa.
  b.onclick=()=>{const o=qa.classList.toggle("open");b.setAttribute("aria-expanded",o);a.style.height=o?a.scrollHeight+"px":"0px";};});
 
 /* banner */
-const MARQ=["Full campaign review","Offers","Landing page","Top 3 fixes","What to do next","48 hour turnaround","Money back guarantee"];
+const MARQ=["Pay $97","Read-only access","10 categories scored","Recorded walkthrough","Top 3 fixes, ranked","48-hour turnaround","Money back guarantee"];
 const run=E("marqA"); if(run){const one=MARQ.map(t=>'<span>'+t+'</span><s>&middot;&middot;</s>').join("");run.innerHTML=one+one+one+one;}
 
 /* header */
@@ -1472,6 +1570,14 @@ document.querySelectorAll("video[data-inview]").forEach(v=>{ if(reduce){v.pause(
  const io=new IntersectionObserver(es=>es.forEach(e=>{
   if(e.isIntersecting){if(!v.dataset.primed){v.dataset.primed="1";v.load();}v.play().catch(()=>{});}else v.pause();}),{threshold:.05});
  io.observe(v);});
+
+/* sticky mobile CTA */
+const stk=E("sticky"),heroCta=E("heroCta"),buy=E("buy");
+if(stk&&heroCta&&buy){
+ const upd=()=>{const h=heroCta.getBoundingClientRect(),f=buy.getBoundingClientRect();
+  const on=h.bottom<0&&!(f.top<innerHeight*.85&&f.bottom>0);
+  stk.classList.toggle("on",on);stk.setAttribute("aria-hidden",!on);stk.querySelector("a").tabIndex=on?0:-1;};
+ upd();addEventListener("scroll",upd,{passive:true});addEventListener("resize",upd,{passive:true});}
 
 /* themes */
 const THEMES=["night","sand","signal"],root=document.documentElement,tgl=E("tgl");
