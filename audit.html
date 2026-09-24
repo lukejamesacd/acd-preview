@@ -1222,7 +1222,9 @@
 
   /* v7: image placeholders */
   .slot p{max-width:40ch}
-  .herovis{display:grid;gap:16px}
+  .herovis{display:grid;gap:16px;min-width:0}
+  .herovis .m01{width:100%;min-width:0}
+  .ahero .inner>div{min-width:0}
   .herovis .quotecard{padding:20px 22px}
   .herovis .quotecard q{font-size:15.5px}
   .pslot{margin-bottom:18px;padding:16px;gap:8px}
@@ -1237,6 +1239,165 @@
   .proofrow{display:grid;grid-template-columns:minmax(0,.42fr) minmax(0,1fr);gap:20px;align-items:stretch}
   .proofrow .twocol{grid-template-columns:1fr}
   @media(max-width:900px){.proofrow{grid-template-columns:1fr}.proofrow .slot{aspect-ratio:4/3!important}}
+
+  /* v8: mockups in the image slots (placeholders until real visuals exist) */
+  .mock{position:relative;overflow:hidden;border:1px solid var(--sc-line);background:var(--sc-bg);color:var(--sc-fg);
+    clip-path:polygon(var(--ch) 0,100% 0,100% calc(100% - var(--ch)),calc(100% - var(--ch)) 100%,0 100%,0 var(--ch));font-family:var(--body)}
+  .mock .extag{position:absolute;right:10px;bottom:10px;font-family:var(--mono);font-size:8.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--accent-t);border:1px dashed color-mix(in srgb,var(--accent-t) 55%,transparent);padding:3px 6px;background:var(--sc-bg);z-index:3}
+  .light .mock .extag{color:#A986FF}
+  .mock .d{display:inline-block;width:7px;height:7px;border-radius:50%;background:#35C475;flex:none}
+  .mock.photo{background:#07050d}
+  .mock.photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+
+  /* 01 hero */
+  .m01{aspect-ratio:5/4;background:radial-gradient(80% 70% at 60% 30%,color-mix(in srgb,var(--accent) 34%,transparent),transparent 70%),var(--sc-bg);
+    -webkit-mask-image:linear-gradient(180deg,#000 72%,transparent);mask-image:linear-gradient(180deg,#000 72%,transparent)}
+  .m01 .lap{position:absolute;left:6%;top:9%;width:78%;transform:perspective(1200px) rotateY(-12deg) rotateX(4deg);transform-origin:left center}
+  .m01 .scr{background:#0F0A1C;border:6px solid #1c1726;border-radius:10px 10px 0 0;padding:6% 7%;aspect-ratio:16/10;color:#F2EFF7;box-shadow:0 30px 80px rgba(0,0,0,.55)}
+  .m01 .base{height:12px;background:linear-gradient(#2a2536,#15111f);border-radius:0 0 12px 12px;margin:0 -5%}
+  .m01 .rhd{display:flex;justify-content:space-between;align-items:center;gap:8px}
+  .m01 .rhd b{font-family:var(--display);font-weight:400;text-transform:uppercase;font-size:clamp(10px,1.1vw,15px)}
+  .m01 .rhd .extag{position:static}
+  .m01 .rtot{display:flex;align-items:baseline;gap:8px;margin:5% 0 4%}
+  .m01 .rtot b{font-family:var(--display);font-weight:400;font-size:clamp(30px,4vw,58px);line-height:.8}
+  .m01 .rtot span{font-family:var(--mono);font-size:clamp(7px,.7vw,10px);letter-spacing:.1em;text-transform:uppercase;color:#A79FB8}
+  .m01 .rbars{display:grid;gap:clamp(4px,.6vw,8px)}
+  .m01 .rbars div{display:grid;grid-template-columns:34% 1fr auto;gap:8px;align-items:center}
+  .m01 .rbars em{font-style:normal;font-family:var(--mono);font-size:clamp(6.5px,.66vw,9.5px);letter-spacing:.05em;text-transform:uppercase;color:#A79FB8;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .m01 .rbars i{height:5px;background:#1B1330;position:relative;display:block}
+  .m01 .rbars i::after{content:"";position:absolute;inset:0 auto 0 0;width:var(--w);background:var(--grad)}
+  .m01 .rbars s{text-decoration:none;font-family:var(--display);font-size:clamp(8px,.8vw,11px)}
+  .phone{position:absolute;background:#0b0913;border:5px solid #1c1726;border-radius:18px;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,.6)}
+  .m01 .phone{right:5%;top:34%;width:27%;aspect-ratio:9/18}
+  .pscr{position:absolute;inset:0}
+  .pscr img{width:100%;height:100%;object-fit:cover;object-position:62% 30%}
+  .pscr .play{position:absolute;left:50%;top:48%;transform:translate(-50%,-50%);width:34%;aspect-ratio:1;border-radius:50%;background:var(--grad);display:grid;place-items:center}
+  .pscr .play svg{width:45%;fill:#fff}
+  .pscr .pcap{position:absolute;left:8%;right:8%;bottom:6%;font-family:var(--mono);font-size:clamp(6px,.6vw,8.5px);letter-spacing:.08em;text-transform:uppercase;color:#fff}
+
+  /* 02 ads manager, untouched */
+  .m02,.m03,.m04{aspect-ratio:16/10;margin-bottom:18px;border-color:color-mix(in srgb,#fff 22%,transparent)}
+  .m02{padding:12px 14px;display:flex;flex-direction:column;gap:9px}
+  .bar2{display:flex;justify-content:space-between;align-items:center;gap:8px}
+  .bar2 b{font-family:var(--display);font-weight:400;text-transform:uppercase;font-size:12px;letter-spacing:.04em}
+  .warn{font-family:var(--mono);font-size:8.5px;letter-spacing:.08em;text-transform:uppercase;color:#F0484E;border:1px solid color-mix(in srgb,#F0484E 55%,transparent);padding:3px 6px}
+  .rows2{display:grid;gap:6px}
+  .rows2 div{display:flex;align-items:center;gap:8px;font-family:var(--mono);font-size:9.5px;color:var(--sc-muted)}
+  .rows2 em{font-style:normal;flex:1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .rows2 s{text-decoration:none;color:var(--sc-fg)}
+  .fade2{margin-top:auto;font-family:var(--mono);font-size:8.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--accent-t)}
+
+  /* 03 agency report */
+  .m03{background:#F4F2F7;color:#1a1522;padding:14px 16px}
+  .m03 .doc{max-width:86%}
+  .m03 .dt{display:block;font-family:var(--display);font-weight:400;text-transform:uppercase;font-size:11.5px;letter-spacing:.03em;margin-bottom:8px}
+  .m03 p{margin:0 0 7px;font-size:10.5px;line-height:1.45;color:#4a4458}
+  .m03 mark{background:#FFE56B;color:#1a1522;padding:0 2px}
+  .m03 .ln{height:6px;background:#DAD5E3;width:92%}.m03 .ln.s{width:64%}
+  .m03 .q{position:absolute;right:14px;width:20px;height:20px;border-radius:50%;border:1.5px solid #F0484E;color:#F0484E;font-family:var(--serif);font-style:italic;font-size:14px;display:grid;place-items:center}
+  .m03 .q1{top:30px}.m03 .q2{top:58px}.m03 .q3{top:112px}
+
+  /* 04 the team slide */
+  .m04{padding:12px 14px}
+  .m04 .st{font-family:var(--display);font-weight:400;text-transform:uppercase;font-size:11.5px;letter-spacing:.03em}
+  .m04 .chart{position:relative;height:58%;margin-top:10px;border-bottom:1px solid var(--sc-line)}
+  .m04 .bars{position:absolute;inset:0 30% 0 4%;display:flex;align-items:flex-end;gap:12%}
+  .m04 .bars i{flex:1;height:var(--h);background:var(--grad);opacity:.9}
+  .m04 .line{position:absolute;inset:0 30% 0 4%;width:66%;height:100%}
+  .m04 .line path{fill:none;stroke:#35C475;stroke-width:1.6;vector-effect:non-scaling-stroke}
+  .m04 .leg{display:flex;gap:12px;margin-top:6px;font-family:var(--mono);font-size:8.5px;text-transform:uppercase;letter-spacing:.08em;color:var(--sc-muted)}
+  .m04 .leg i{display:inline-block;width:8px;height:8px;margin-right:4px;vertical-align:-1px}
+  .m04 .leg .sp{background:var(--accent)}.m04 .leg .ld{background:#35C475}
+  .m04 .note{position:absolute;right:10px;top:34%;width:34%;background:#FFE56B;color:#1a1522;font-family:var(--serif);font-style:italic;font-size:13px;line-height:1.2;padding:10px;transform:rotate(3deg);box-shadow:0 8px 20px rgba(0,0,0,.35)}
+
+  /* 05 checkout + intake */
+  .m05{aspect-ratio:4/3;margin-top:18px;background:radial-gradient(70% 60% at 30% 40%,color-mix(in srgb,var(--accent) 26%,transparent),transparent 70%),var(--sc-bg)}
+  .m05 .phone.sm{left:8%;top:9%;width:42%;aspect-ratio:9/17;border-radius:16px}
+  .ui{background:#F6F5F8;color:#111;padding:14% 10%;display:flex;flex-direction:column;gap:7px}
+  .ui .h,.panel5 .h{font-family:var(--display);font-weight:400;text-transform:uppercase;font-size:11px;letter-spacing:.04em}
+  .line2{display:flex;justify-content:space-between;font-size:9px;border-bottom:1px solid #E0DCE8;padding-bottom:5px}
+  .line2 em{font-style:normal}.line2 s{text-decoration:none}.line2.m{color:#5C5568}.line2.t{font-weight:700;border-bottom:0}
+  .ui .pay{margin-top:auto;background:var(--grad);color:#fff;text-align:center;font-family:var(--display);font-size:10px;letter-spacing:.06em;padding:7px}
+  .panel5{position:absolute;right:6%;top:24%;width:48%;background:var(--sc-bg);border:1px solid var(--sc-line);padding:10px;display:flex;flex-direction:column;gap:6px;box-shadow:0 16px 40px rgba(0,0,0,.45)}
+  .panel5 .fld{height:18px;border:1px solid var(--sc-line);font-family:var(--mono);font-size:7.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--sc-muted);padding:4px 6px}
+  .panel5 .ok{display:flex;align-items:center;gap:5px;font-family:var(--mono);font-size:7.5px;letter-spacing:.06em;text-transform:uppercase;color:#35C475;margin-top:2px}
+  .panel5 .ok svg{width:11px;fill:none;stroke:#35C475;stroke-width:3}
+
+  /* 06 photo with pins */
+  .m06{aspect-ratio:4/3;margin-top:18px}
+  .m06 img{object-position:60% 30%}
+  .pin2{position:absolute;width:22px;height:22px;border-radius:50%;background:var(--grad);color:#fff;font-family:var(--display);font-size:11px;display:grid;place-items:center;box-shadow:0 0 0 5px color-mix(in srgb,var(--accent) 30%,transparent)}
+
+  /* 07 inbox */
+  .m07{aspect-ratio:4/3;margin-top:18px;background:#F6F5F8;color:#111;padding:12px}
+  .mail{display:grid;gap:8px}
+  .mrow{display:grid;grid-template-columns:auto 1fr auto;gap:8px;align-items:start;padding:9px;background:#fff;border:1px solid #E0DCE8}
+  .mrow.hot{border-color:var(--accent);box-shadow:0 6px 20px color-mix(in srgb,var(--accent) 22%,transparent)}
+  .mrow .av{width:24px;height:24px;border-radius:50%;background:var(--grad);color:#fff;font-style:normal;font-family:var(--display);font-size:9px;display:grid;place-items:center}
+  .mrow .av.g{background:#E0DCE8}
+  .mrow b{display:block;font-size:10px}.mrow em{display:block;font-style:normal;font-size:10px;color:#5C5568;margin-top:2px}
+  .mrow s{text-decoration:none;font-family:var(--mono);font-size:8px;color:#8A8398}
+  .mrow .att{display:inline-flex;align-items:center;gap:4px;margin:6px 5px 0 0;font-size:8.5px;border:1px solid #E0DCE8;padding:3px 6px;color:#111}
+  .mrow .att i{font-style:normal;font-family:var(--mono);font-size:7px;color:#fff;background:var(--accent);padding:1px 3px}
+  .gl{display:block;height:7px;background:#E0DCE8;width:60%}.gl.s{width:85%;margin-top:6px}
+
+  /* 08 lead capture flow */
+  .m08{margin-top:clamp(18px,2.2vw,28px);display:flex;align-items:center;justify-content:space-between;gap:6px;padding:clamp(22px,3vw,40px) clamp(16px,3vw,40px) clamp(30px,3.4vw,44px)}
+  .m08 .nd{display:grid;justify-items:center;gap:8px;text-align:center;flex:none;width:clamp(70px,11vw,130px)}
+  .m08 .ic{width:clamp(38px,4vw,56px);aspect-ratio:1;display:grid;place-items:center;border:1px solid var(--sc-line);background:color-mix(in srgb,var(--accent) 14%,transparent);color:var(--accent-t);font-size:clamp(16px,1.8vw,24px);clip-path:polygon(8px 0,100% 0,100% calc(100% - 8px),calc(100% - 8px) 100%,0 100%,0 8px)}
+  .m08 .nd b{font-family:var(--mono);font-weight:400;font-size:clamp(8.5px,.8vw,11px);letter-spacing:.1em;text-transform:uppercase;color:var(--sc-fg)}
+  .m08 .nd.dim{opacity:.4}
+  .m08 .ar{flex:1;height:2px;background:var(--grad);position:relative;margin-bottom:22px}
+  .m08 .ar::after{content:"";position:absolute;right:-1px;top:-4px;border:5px solid transparent;border-left:7px solid var(--accent-t)}
+  .m08 .ar.dim{opacity:.35}
+  .m08 .ar.bad{background:repeating-linear-gradient(90deg,#F0484E 0 6px,transparent 6px 11px)}
+  .m08 .ar.bad::after{border-left-color:#F0484E}
+  .m08 .ar.bad em{position:absolute;left:50%;top:-26px;transform:translateX(-50%);white-space:nowrap;font-style:normal;font-family:var(--mono);font-size:clamp(7.5px,.7vw,9.5px);letter-spacing:.08em;text-transform:uppercase;color:#F0484E;background:var(--sc-bg);padding:2px 5px;border:1px solid color-mix(in srgb,#F0484E 50%,transparent)}
+  @media(max-width:700px){.m08{flex-direction:column;align-items:center;gap:4px;padding-bottom:40px}.m08 .ar{flex:none;width:2px;height:26px;margin:0}
+    .m08 .ar::after{right:-4px;top:auto;bottom:-6px;border:5px solid transparent;border-top:7px solid var(--accent-t)}.m08 .ar.bad::after{border-top-color:#F0484E;border-left-color:transparent}
+    .m08 .ar.bad em{top:50%;left:14px;transform:translateY(-50%)}.m08 .nd{width:auto;grid-template-columns:auto auto;align-items:center}}
+
+  /* 09 before / after */
+  .m09{margin:0 0 clamp(24px,3vw,36px);display:grid;grid-template-columns:1fr 1fr}
+  .m09 .half{padding:clamp(18px,2.4vw,30px);position:relative}
+  .m09 .bf{border-right:1px solid var(--sc-line)}
+  .m09 .af{background:color-mix(in srgb,var(--accent) 10%,transparent)}
+  .m09 .lbl{display:block;font-family:var(--mono);font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--sc-muted);margin-bottom:14px}
+  .m09 .af .lbl{color:var(--accent-t)}
+  .m09 .chips{display:flex;flex-wrap:wrap;gap:6px}
+  .m09 .chips span{font-family:var(--mono);font-size:clamp(9px,.8vw,11px);border:1px solid var(--sc-line);padding:5px 8px;color:var(--sc-muted)}
+  .m09 .chips span:nth-child(2n){transform:rotate(-1.5deg)}.m09 .chips span:nth-child(3n){transform:rotate(1.2deg)}
+  .m09 .bank{margin-top:16px;font-size:clamp(12px,1.1vw,14px);color:var(--sc-muted)}
+  .m09 .bank b{color:#F0484E;font-weight:600}
+  .m09 .fx{display:grid;grid-template-columns:auto 1fr auto;gap:10px;align-items:center;padding:9px 0;border-bottom:1px solid var(--sc-line)}
+  .m09 .fx:last-child{border-bottom:0}
+  .m09 .fx i{width:22px;height:22px;border-radius:50%;background:var(--grad);color:#fff;font-style:normal;font-family:var(--display);font-size:11px;display:grid;place-items:center}
+  .m09 .fx em{font-style:normal;font-size:clamp(12px,1.1vw,14px)}
+  .m09 .fx s{text-decoration:none;font-family:var(--display);font-size:clamp(12px,1.2vw,16px)}
+  @media(max-width:760px){.m09{grid-template-columns:1fr}.m09 .bf{border-right:0;border-bottom:1px solid var(--sc-line)}}
+
+  /* 10 action plan page */
+  .m10{aspect-ratio:auto;margin-top:18px;background:#E9E6EF;padding:18px 18px 0}
+  .m10 .page{background:#fff;color:#111;padding:18px 20px 22px;box-shadow:0 -6px 30px rgba(0,0,0,.25)}
+  .m10 .ph{display:flex;justify-content:space-between;align-items:center}
+  .m10 .ph b{font-family:var(--display);font-weight:400;text-transform:uppercase;font-size:16px}
+  .m10 .ph .extag{position:static;background:#fff;color:var(--accent);border-color:var(--accent)}
+  .m10 .pm{margin:4px 0 12px;font-family:var(--mono);font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:#8A8398}
+  .m10 .pr{display:grid;grid-template-columns:auto 1fr auto;gap:12px;align-items:center;padding:10px 0;border-top:1px solid #E0DCE8}
+  .m10 .pr i{font-style:normal;font-family:var(--display);font-size:18px;color:var(--accent)}
+  .m10 .pr b{display:block;font-size:12px}.m10 .pr em{display:block;font-style:normal;font-size:11px;color:#5C5568}
+  .m10 .pr s{text-decoration:none;font-family:var(--display);font-size:15px}
+
+  /* 11 portrait */
+  .m11{aspect-ratio:4/5}
+  .m11 img{object-position:50% 30%}
+  .m11 .cap11{position:absolute;left:0;right:0;bottom:0;padding:40px 18px 16px;background:linear-gradient(0deg,rgba(7,5,13,.92),transparent);color:#fff;font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase}
+  .m11 .cap11 b{display:block;font-family:var(--display);font-weight:400;font-size:20px;letter-spacing:.03em;margin-bottom:3px}
+  .proofrow .m11{aspect-ratio:auto;min-height:420px;height:100%}
+  @media(max-width:900px){.proofrow .m11{aspect-ratio:4/3;min-height:0;height:auto}}
+  .m09 .half{display:block}
+  .m05 .phone.sm{top:8%;width:34%;aspect-ratio:9/16}
+  .m07{background:#E9E6EF;border-color:#D5D0DE}
 </style>
 
 <header id="hdr">
@@ -1264,7 +1425,14 @@
       <p class="fineprint">48-hour turnaround &middot; No sales call &middot; Money back guarantee</p>
     </div>
     <div class="herovis">
-      <div class="slot " style="aspect-ratio:5/4"><span class="mk">Visual 01 · Hero</span><p>The finished audit: scorecard reading 54/100 on a laptop, the Loom walkthrough on a phone beside it. Angled, lit in the purple, bleeding off the bottom edge so the page reads as &ldquo;keep scrolling&rdquo;.</p></div>
+      <div class="mock m01" data-visual="01">
+  <div class="lap"><div class="scr">
+    <div class="rhd"><b>Ads audit scorecard</b><span class="extag">Example</span></div>
+    <div class="rtot"><b>54</b><span>/100 &middot; stages 01&ndash;03</span></div>
+    <div class="rbars"><div><em>Structure</em><i style="--w:70%"></i><s>7/10</s></div><div><em>Targeting</em><i style="--w:50%"></i><s>5/10</s></div><div><em>Creative & offer</em><i style="--w:60%"></i><s>6/10</s></div><div><em>Tracking</em><i style="--w:30%"></i><s>3/10</s></div><div><em>Message match</em><i style="--w:40%"></i><s>4/10</s></div><div><em>Lead capture</em><i style="--w:40%"></i><s>4/10</s></div></div>
+  </div><div class="base"></div></div>
+  <div class="phone"><div class="pscr"><img src="assets/hf/cta-final-poster.jpg" alt="" loading="lazy"><span class="play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span><span class="pcap">Walkthrough &middot; 14:22</span></div></div>
+</div>
     <div class="quotecard">
       <q>We saw an immediate increase in results; more leads being delivered, the cost per lead decreasing, amazing quality of creative, and well-thought-out copy that converts.</q>
       <div class="who">Dav Lipasaar &middot; Director, SAAR Media &amp; Entertainment &middot; from my previous business</div>
@@ -1280,9 +1448,33 @@
   <div class="wrap rv">
     <h2 class="ah">You&rsquo;re probably<span class="it">one of three.</span></h2>
     <div class="personas">
-      <article><div class="slot pslot" style="aspect-ratio:16/10"><span class="mk">Visual 02 · Persona 1</span><p>Owner at the kitchen bench after hours, phone in hand, Ads Manager open, clearly hasn&rsquo;t looked in a while.</p></div><span class="n">01</span><p><b>You set it up yourself</b> and haven&rsquo;t looked at it properly in months.</p></article>
-      <article><div class="slot pslot" style="aspect-ratio:16/10"><span class="mk">Visual 03 · Persona 2</span><p>Owner reading a monthly report from their agency, a line of jargon highlighted, a question mark in the margin.</p></div><span class="n">02</span><p><b>Someone else runs it</b> and you&rsquo;re not really across what they&rsquo;re doing.</p></article>
-      <article><div class="slot pslot" style="aspect-ratio:16/10"><span class="mk">Visual 04 · Persona 3</span><p>A small team round a screen: the marketer presenting, the owner arms folded, weighing it up.</p></div><span class="n">03</span><p><b>You&rsquo;ve got a person or a team on it</b> and you want to know if it&rsquo;s built to win or just to spend.</p></article>
+      <article><div class="mock pslot m02" data-visual="02">
+  <div class="bar2"><b>Ads Manager</b><span class="warn">Last opened 94 days ago</span></div>
+  <div class="rows2">
+    <div><i class="d on"></i><em>Winter promo &mdash; broad</em><s>$1,182</s></div>
+    <div><i class="d on"></i><em>Winter promo &mdash; interests</em><s>$742</s></div>
+    <div><i class="d on"></i><em>Lookalike 1%</em><s>$737</s></div>
+    <div><i class="d on"></i><em>Retargeting &mdash; 180d</em><s>$297</s></div>
+  </div>
+  <div class="fade2">Still spending &middot; $98/day</div>
+</div><span class="n">01</span><p><b>You set it up yourself</b> and haven&rsquo;t looked at it properly in months.</p></article>
+      <article><div class="mock pslot m03" data-visual="03">
+  <div class="doc">
+    <b class="dt">Monthly performance report &middot; August</b>
+    <p>Reach up 18% MoM as <mark>CBO exits the learning phase</mark> and blended ROAS stabilises across <mark>ASC+ and broad</mark> ad sets.</p>
+    <p class="ln"></p><p class="ln s"></p>
+    <p>Recommend increasing <mark>top-of-funnel budget</mark> by 20%.</p>
+  </div>
+  <span class="q q1">?</span><span class="q q2">?</span><span class="q q3">?</span>
+</div><span class="n">02</span><p><b>Someone else runs it</b> and you&rsquo;re not really across what they&rsquo;re doing.</p></article>
+      <article><div class="mock pslot m04" data-visual="04">
+  <div class="slide"><b class="st">Meta performance &middot; Q3</b>
+    <div class="chart"><div class="bars"><i style="--h:38%"></i><i style="--h:52%"></i><i style="--h:66%"></i><i style="--h:80%"></i></div>
+      <svg class="line" viewBox="0 0 100 40" preserveAspectRatio="none"><path d="M4 30 L36 29 L68 31 L96 30"/></svg></div>
+    <div class="leg"><span><i class="sp"></i>Spend</span><span><i class="ld"></i>Leads</span></div>
+  </div>
+  <span class="note">Built to win, or just to spend?</span>
+</div><span class="n">03</span><p><b>You&rsquo;ve got a person or a team on it</b> and you want to know if it&rsquo;s built to win or just to spend.</p></article>
     </div>
     <p class="converge">Whichever one you are, you&rsquo;re paying for the same ads and you can&rsquo;t see where the money is going. <b>That&rsquo;s what this fixes.</b></p>
   </div>
@@ -1293,9 +1485,32 @@
   <div class="wrap rv">
     <h2 class="ah">Three steps.<span class="it">No call.</span></h2>
     <div class="steps">
-      <article><span class="n">01</span><div class="slot sslot" style="aspect-ratio:4/3"><span class="mk">Visual 05 · Step 1</span><p>Checkout and the short intake form on a phone, with the &ldquo;grant read-only access&rdquo; screen from Meta Business Settings.</p></div><span class="who">You</span><h3>Pay and point me at it</h3><p>Pay the $97, fill in a short intake about your business, your numbers and the campaign, and give me read-only access to your Meta ad account. I can look, and that&rsquo;s all.</p></article>
-      <article><span class="n">02</span><div class="slot sslot" style="aspect-ratio:4/3"><span class="mk">Visual 06 · Step 2</span><p>Luke at the desk, Ads Manager on the big screen, annotations going on. Real, not staged-glossy.</p></div><span class="who">Me</span><h3>I go through it</h3><p>Your ad account, your landing page and how the lead gets captured. All ten categories, scored against the same checklist every time. About an hour and a half of the same work I do for build clients.</p></article>
-      <article><span class="n">03</span><div class="slot sslot" style="aspect-ratio:4/3"><span class="mk">Visual 07 · Step 3</span><p>An inbox notification: &ldquo;Your audit is ready&rdquo;, with the PDF and the Loom link attached.</p></div><span class="who">Within 48 hours</span><h3>It lands in your inbox</h3><p>Your scored report, a recorded walkthrough of your own account, and the three biggest fixes ranked by what they&rsquo;re costing you. The clock starts when your access comes through.</p></article>
+      <article><span class="n">01</span><div class="mock sslot m05" data-visual="05">
+  <div class="phone sm"><div class="pscr ui">
+    <b class="h">Checkout</b>
+    <div class="line2"><em>Meta Campaign Audit</em><s>$97.00</s></div>
+    <div class="line2 m"><em>GST</em><s>$9.70</s></div>
+    <div class="line2 t"><em>Total</em><s>$106.70</s></div>
+    <span class="pay">Pay &rarr;</span>
+  </div></div>
+  <div class="panel5">
+    <b class="h">Intake &middot; 2 of 5</b>
+    <span class="fld">Average job value</span><span class="fld">Close rate</span>
+    <span class="ok"><svg viewBox="0 0 24 24"><path d="M4 12.5l5.5 5.5L20 7"/></svg>Read-only access granted</span>
+  </div>
+</div><span class="who">You</span><h3>Pay and point me at it</h3><p>Pay the $97, fill in a short intake about your business, your numbers and the campaign, and give me read-only access to your Meta ad account. I can look, and that&rsquo;s all.</p></article>
+      <article><span class="n">02</span><div class="mock sslot m06 photo" data-visual="06">
+  <img src="assets/hf/work-v6.jpg" alt="Luke working through an ad account" loading="lazy">
+  <span class="pin2" style="left:18%;top:26%">1</span><span class="pin2" style="left:42%;top:58%">2</span><span class="pin2" style="left:80%;top:30%">3</span>
+</div><span class="who">Me</span><h3>I go through it</h3><p>Your ad account, your landing page and how the lead gets captured. All ten categories, scored against the same checklist every time. About an hour and a half of the same work I do for build clients.</p></article>
+      <article><span class="n">03</span><div class="mock sslot m07" data-visual="07">
+  <div class="mail">
+    <div class="mrow hot"><i class="av">AC</i><div><b>AutoConvert Digital</b><em>Your Meta Campaign Audit is ready</em>
+      <span class="att"><i>PDF</i>Audit report</span><span class="att"><i>&#9654;</i>Walkthrough &middot; 14:22</span></div><s>now</s></div>
+    <div class="mrow"><i class="av g"></i><div><b class="gl"></b><em class="gl s"></em></div><s>9:12</s></div>
+    <div class="mrow"><i class="av g"></i><div><b class="gl"></b><em class="gl s"></em></div><s>Tue</s></div>
+  </div>
+</div><span class="who">Within 48 hours</span><h3>It lands in your inbox</h3><p>Your scored report, a recorded walkthrough of your own account, and the three biggest fixes ranked by what they&rsquo;re costing you. The clock starts when your access comes through.</p></article>
     </div>
     <div class="btns" style="margin-top:clamp(30px,3.4vw,44px)"><a class="btn" href="#buy" data-checkout>Get your audit &middot; $97 &rarr;</a></div>
   </div>
@@ -1360,7 +1575,10 @@
 
     <div class="stagehd"><span>Stage 03</span><b>Lead capture</b><em>1 category</em></div>
     <p class="strip">Your forms, your pixel and Conversions API, and whether each lead lands somewhere a person will actually see it.</p>
-    <div class="slot wide" style="aspect-ratio:21/6"><span class="mk">Visual 08 · Lead capture flow</span><p>A simple left-to-right diagram: ad → form → pixel &amp; Conversions API → CRM → a phone buzzing with the new lead. One broken link marked in red.</p></div>
+    <div class="mock wide m08" data-visual="08">
+  <div class="nd "><span class="ic">&#9673;</span><b>Ad</b></div><span class="ar"></span><div class="nd "><span class="ic">&#9635;</span><b>Form</b></div><span class="ar"></span><div class="nd "><span class="ic">&#9678;</span><b>Pixel &amp; CAPI</b></div><span class="ar bad"><em>Not syncing</em></span><div class="nd dim"><span class="ic">&#9636;</span><b>CRM</b></div><span class="ar dim"></span><div class="nd dim"><span class="ic">&#9743;</span><b>Your phone</b></div>
+  <span class="extag">Example</span>
+</div>
   </div>
 </section>
 
@@ -1369,7 +1587,18 @@
   <div class="wrap rv">
     <h2 class="ah">You&rsquo;ll know<span class="it">what to fix first.</span></h2>
     <p class="say">Every one of these is money you&rsquo;ve already paid for. It doesn&rsquo;t cost more ad spend to fix. It costs knowing which one to fix first.</p>
-    <div class="slot wide" style="aspect-ratio:21/7"><span class="mk">Visual 09 · Before / after</span><p>Split image. Left: a cluttered dashboard and a bank balance that disagrees with it. Right: the same account with three numbered fixes circled. Same data, now in order.</p></div>
+    <div class="mock wide m09" data-visual="09">
+  <div class="half bf"><span class="lbl">Before</span>
+    <div class="chips"><span>CTR 2.1%</span><span>CPM $14.20</span><span>Reach 48,210</span><span>Freq 3.2</span><span>CPC $0.98</span><span>Impr. 91k</span><span>Link clicks 1,204</span></div>
+    <div class="bank">$2,958 out &middot; 68 leads &middot; <b>which ones worked?</b></div>
+  </div>
+  <div class="half af"><span class="lbl">After</span>
+    <div class="fx"><i>1</i><em>Switch top campaign off Traffic</em><s>$1,182/mo</s></div>
+    <div class="fx"><i>2</i><em>Match the page to the ad</em><s>~31 leads</s></div>
+    <div class="fx"><i>3</i><em>Cut the form to four fields</em><s>7 fewer</s></div>
+  </div>
+  <span class="extag">Example</span>
+</div>
     <div class="plan" style="margin-top:clamp(24px,3vw,38px)">
       <div class="planrow"><div class="rank">01</div><div><h4>Switch the top campaign off Traffic</h4><p>Rebuild it as a Leads campaign optimising for the event that matters. The spend is already there; it is buying the wrong thing.</p></div><div class="amt2">$1,182<small>per month, redirected</small></div></div>
       <div class="planrow"><div class="rank">02</div><div><h4>Match the page headline to the ad</h4><p>One line. Same offer, same words, same price. Costs nothing and it is the biggest leak on the page.</p></div><div class="amt2">~31<small>enquiries / month at current traffic</small></div></div>
@@ -1406,7 +1635,15 @@
           </figure>
         </div>
         <p class="stagenote" style="margin-top:14px">Watch it twice. Send it to whoever runs your ads. It&rsquo;s yours.</p>
-        <div class="slot " style="aspect-ratio:16/9"><span class="mk">Visual 10 · The action plan</span><p>A page of the written plan: three ranked fixes with the dollar figure beside each, as the client will actually receive it.</p></div>
+        <div class="mock m10" data-visual="10">
+  <div class="page">
+    <div class="ph"><b>Action plan</b><span class="extag">Example</span></div>
+    <p class="pm">Ranked by what each one is costing you</p>
+    <div class="pr"><i>01</i><div><b>Switch the top campaign off Traffic</b><em>Rebuild as Leads, optimising for the event that matters.</em></div><s>$1,182</s></div>
+    <div class="pr"><i>02</i><div><b>Match the page headline to the ad</b><em>Same offer, same words, same price.</em></div><s>~31</s></div>
+    <div class="pr"><i>03</i><div><b>Cut the form to four fields</b><em>Name, phone, suburb, job type.</em></div><s>7</s></div>
+  </div>
+</div>
       </div>
     </div>
     <div class="deliv3">
@@ -1424,7 +1661,10 @@
     <h2 class="ah">10+ years<span class="it">inside other people&rsquo;s ad accounts.</span></h2>
     <p class="say">Before AutoConvert, at my previous business, I ran Meta campaigns for service businesses in more than ten niches: trades, property, cosmetic clinics, hospitality training. That&rsquo;s what the checklist is built from.</p>
     <div class="proofrow">
-      <div class="slot " style="aspect-ratio:4/5"><span class="mk">Visual 11 · Luke</span><p>A proper portrait of Luke at work, not a headshot on white. Warm, direct, the person who&rsquo;ll actually be inside your account.</p></div>
+      <div class="mock m11 photo" data-visual="11">
+  <img src="assets/people/luke-avatar-full.jpg" alt="Luke Wade" loading="lazy">
+  <span class="cap11"><b>Luke Wade</b>The one inside your account</span>
+</div>
       <div class="twocol proof">
       <div class="quotecard"><q>Luke&rsquo;s ability to understand our business and speak with our voice is his greatest asset and perhaps the biggest problem we&rsquo;ve had in the past with previous marketing efforts.</q><div class="who">Peter Giannakis &middot; Director, HG Coffee School &middot; from my previous business</div></div>
       <div class="quotecard"><q>Leads used to get followed up whenever I found a spare minute between clients. Luke helped streamline our enquiries and lead capture so everything is in one place and tracked from start to finish. In this game, the fastest salesman gets the deal.</q><div class="who">Sam Roberts &middot; Principal Dealer, Rev&eacute; Auto Haus</div></div>
