@@ -2,7 +2,7 @@
 <meta name="robots" content="noindex, nofollow">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>The $97 Meta Campaign Audit — AutoConvert Digital</title>
-<meta name="description" content="More revenue, same ad spend. A full review of your Meta ads, your offer and your landing page, scored against the first three stages of the Click-to-Close Circuit. 48 hours, no sales call, money back.">
+<meta name="description" content="I check your Facebook and Instagram ads, your landing page and your enquiry form. In 48 hours you get a score, a video and a list of what to fix first. $97 + GST, no sales call, money back.">
 <meta property="og:image" content="assets/hf/cta-v6.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -1398,12 +1398,58 @@
   .m09 .half{display:block}
   .m05 .phone.sm{top:8%;width:34%;aspect-ratio:9/16}
   .m07{background:#E9E6EF;border-color:#D5D0DE}
+
+  /* v9: labels on every visual, product-first layout */
+  figure.vis{margin:0;min-width:0}
+  figure.vis figcaption{margin-top:10px;font-size:14px;line-height:1.45;color:var(--muted)}
+  figure.vis figcaption b{color:var(--fg);font-weight:700;margin-right:4px}
+  .pfield figure.vis figcaption{color:color-mix(in srgb,#fff 70%,transparent);font-size:12.5px;margin:8px 0 16px}
+  .pfield figure.vis figcaption b{color:#fff;font-weight:600}
+  .personas .mock{margin-bottom:0}
+  .personas p{font-size:clamp(16px,1.4vw,18px)}
+  .personas b{font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.02em;display:block;font-size:1.1em;margin-bottom:6px}
+  .wyg{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(18px,2.4vw,32px);align-items:start}
+  .wyg-b{display:grid;gap:clamp(18px,2.2vw,28px)}
+  .wyg .m10{margin-top:0}
+  @media(max-width:900px){.wyg{grid-template-columns:1fr}}
+  .area{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 14px;margin:clamp(40px,4.6vw,64px) 0 12px;padding-top:20px;border-top:1px solid var(--line)}
+  .artsec .say + .area{margin-top:0}
+  .area b{font-family:var(--display);font-weight:400;text-transform:uppercase;font-size:clamp(22px,2.2vw,30px);letter-spacing:.02em}
+  .area span{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--accent-t)}
+  .checks{list-style:none;margin:0 0 18px;padding:0;display:flex;flex-wrap:wrap;gap:8px}
+  .checks li{font-size:14.5px;padding:7px 12px;border:1px solid var(--line);background:color-mix(in srgb,var(--raise) 70%,transparent)}
+  .checks li::before{content:"\2713";color:#35C475;margin-right:7px;font-weight:700}
+  #cost .maths{margin:0 0 clamp(24px,3vw,36px);max-width:none}
+  #cost .m09{margin:0}
+  .steps .n{font-size:clamp(72px,8vw,120px)}
+  .steps h3{margin-top:14px}
+  .steps figure.vis{margin-top:18px}
+  .steps .mock{margin-top:0}
+  #how .steps article{border-top-color:var(--line)}
+  .proofrow figure.vis{display:flex;flex-direction:column}
+  .proofrow figure.vis .mock{flex:1}
+  .dark .steps .n{background:linear-gradient(160deg,#D9C8FF 0%,#A986FF 45%,#6E2CF4 100%);-webkit-background-clip:text;background-clip:text}
+  [data-theme="signal"] .dark .steps .n,[data-theme="sand"] .dark .steps .n{background:var(--grad);-webkit-background-clip:text;background-clip:text}
+
+  /* v9 hero: the whole purchase pitch above the fold */
+  .ahero .pitch h1.ah{font-size:clamp(46px,5.6vw,92px)}
+  .ahero .pitch .lede{max-width:50ch;margin-top:18px}
+  .hlist{list-style:none;margin:20px 0 0;padding:0;display:grid;gap:9px;max-width:52ch}
+  .hlist li{display:flex;gap:11px;align-items:flex-start;font-size:clamp(15px,1.25vw,17px);line-height:1.4;color:var(--fg)}
+  .hlist .tk{flex:none;width:19px;height:19px;display:grid;place-items:center;margin-top:1px}
+  .hlist .tk svg{width:16px;height:16px;fill:none;stroke:#35C475;stroke-width:2.8;stroke-linecap:round;stroke-linejoin:round}
+  .buyrow{display:flex;flex-wrap:wrap;align-items:center;gap:18px 26px;margin-top:24px}
+  .buyrow .was{line-height:1.5}
+  .guar{display:flex;gap:10px;align-items:flex-start;margin:18px 0 0;max-width:54ch;font-size:14px;line-height:1.5;color:var(--muted)}
+  .guar b{color:var(--fg)}
+  .guar svg{flex:none;width:22px;height:22px;fill:none;stroke:#35C475;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;margin-top:1px}
+  @media(min-width:921px) and (max-height:1050px){.ahero .pitch h1.ah{font-size:clamp(40px,4.6vw,72px)}.hlist{gap:6px}.hlist li{font-size:15px}}
 </style>
 
 <header id="hdr">
   <div class="wrap nav">
     <span class="brand">AutoConvert <b>Digital</b></span>
-    <a class="btn" href="#buy" data-checkout>Get your $97 audit →</a>
+    <a class="btn" href="#buy" data-checkout>Get my $97 audit →</a>
     <span class="navsep" aria-hidden="true">|</span>
     <button class="tgl" id="tgl" type="button" aria-label="Change colour theme">
       <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3.6v7.2"/><path d="M7.4 6.4a7 7 0 1 0 9.2 0"/></svg>
@@ -1413,27 +1459,35 @@
 
 <main id="top">
 
-<!-- 01 HOOK ................................................. -->
+<!-- 1 WHAT IT IS ............................................ -->
 <section class="hero dark env ahero" id="hero" style="--env:url(assets/env-audit-lab.jpg)">
   <div class="envbg" aria-hidden="true"></div>
   <div class="wrap inner rv">
-    <div>
-      <h1 class="ah">More revenue,<span class="it">same ad spend.</span></h1>
-      <p class="lede" style="max-width:52ch">A full review of your Meta ads, your landing page and how your leads get captured, scored out of 100 against the first three stages of the Click-to-Close Circuit&trade;. Done by me, not a junior.</p>
-      <div class="price-line"><span class="amt">$97</span><span class="was">+ GST &middot; Foundation price until 31 Dec</span></div>
-      <div class="btns" style="margin-top:22px" id="heroCta"><a class="btn" href="#buy" data-checkout>Get your audit &middot; $97 &rarr;</a></div>
-      <p class="fineprint">48-hour turnaround &middot; No sales call &middot; Money back guarantee</p>
+    <div class="pitch">
+      <h1 class="ah">The $97 ad audit.<span class="it">More leads, same ad spend.</span></h1>
+      <p class="lede">I check your Facebook and Instagram ads, your landing page and your enquiry form. Then I show you what&rsquo;s wasting money, and what to fix first.</p>
+      <ul class="hlist">
+        <li><span class="tk"><svg viewBox="0 0 24 24"><path d="M4 12.5l5.5 5.5L20 7"/></svg></span><span><b>A score out of 100</b> &mdash; I check 10 things and mark each one</span></li>
+        <li><span class="tk"><svg viewBox="0 0 24 24"><path d="M4 12.5l5.5 5.5L20 7"/></svg></span><span><b>A video</b> of me going through your account</span></li>
+        <li><span class="tk"><svg viewBox="0 0 24 24"><path d="M4 12.5l5.5 5.5L20 7"/></svg></span><span><b>A fix list</b> &mdash; your 3 biggest problems, in order, with what each one costs you</span></li>
+        <li><span class="tk"><svg viewBox="0 0 24 24"><path d="M4 12.5l5.5 5.5L20 7"/></svg></span><span><b>All in your inbox within 48 hours</b></span></li>
+      </ul>
+      <div class="buyrow">
+        <div class="price-line" style="margin:0"><span class="amt">$97</span><span class="was">+ GST &middot; one-off<br>Goes up to $297 in January</span></div>
+        <div class="btns" style="margin:0" id="heroCta"><a class="btn" href="#buy" data-checkout>Get my audit &middot; $97 &rarr;</a></div>
+      </div>
+      <p class="guar"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l7 3v6c0 4.5-3 7.6-7 9-4-1.4-7-4.5-7-9V6z"/><path d="M8.5 12.2l2.4 2.4 4.6-4.8"/></svg><span><b>Money back if it doesn&rsquo;t help.</b> No sales call. No contract. I can look at your account, but I can&rsquo;t change anything.</span></p>
     </div>
     <div class="herovis">
-      <div class="mock m01" data-visual="01">
+      <figure class="vis"><div class="mock m01" data-visual="01">
   <div class="lap"><div class="scr">
-    <div class="rhd"><b>Ads audit scorecard</b><span class="extag">Example</span></div>
-    <div class="rtot"><b>54</b><span>/100 &middot; stages 01&ndash;03</span></div>
-    <div class="rbars"><div><em>Structure</em><i style="--w:70%"></i><s>7/10</s></div><div><em>Targeting</em><i style="--w:50%"></i><s>5/10</s></div><div><em>Creative & offer</em><i style="--w:60%"></i><s>6/10</s></div><div><em>Tracking</em><i style="--w:30%"></i><s>3/10</s></div><div><em>Message match</em><i style="--w:40%"></i><s>4/10</s></div><div><em>Lead capture</em><i style="--w:40%"></i><s>4/10</s></div></div>
+    <div class="rhd"><b>Your audit score</b><span class="extag">Example</span></div>
+    <div class="rtot"><b>54</b><span>out of 100</span></div>
+    <div class="rbars"><div><em>Set-up</em><i style="--w:70%"></i><s>7/10</s></div><div><em>Who sees ads</em><i style="--w:50%"></i><s>5/10</s></div><div><em>Ads &amp; offer</em><i style="--w:60%"></i><s>6/10</s></div><div><em>Tracking</em><i style="--w:30%"></i><s>3/10</s></div><div><em>Page matches ad</em><i style="--w:40%"></i><s>4/10</s></div><div><em>Leads reach you</em><i style="--w:40%"></i><s>4/10</s></div></div>
   </div><div class="base"></div></div>
   <div class="phone"><div class="pscr"><img src="assets/hf/cta-final-poster.jpg" alt="" loading="lazy"><span class="play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span><span class="pcap">Walkthrough &middot; 14:22</span></div></div>
-</div>
-    <div class="quotecard">
+</div><figcaption><b>What you get:</b> <span>your score, your video, and your fix list.</span></figcaption></figure>
+      <div class="quotecard">
       <q>We saw an immediate increase in results; more leads being delivered, the cost per lead decreasing, amazing quality of creative, and well-thought-out copy that converts.</q>
       <div class="who">Dav Lipasaar &middot; Director, SAAR Media &amp; Entertainment &middot; from my previous business</div>
     </div>
@@ -1443,12 +1497,12 @@
 
 <div class="marq" aria-hidden="true"><div class="run" id="marqA"></div></div>
 
-<!-- 02 PROBLEM: ONE OF THREE ................................ -->
+<!-- 2 IS THIS YOU ........................................... -->
 <section class="pfield" id="you">
   <div class="wrap rv">
-    <h2 class="ah">You&rsquo;re probably<span class="it">one of three.</span></h2>
+    <h2 class="ah">Does this<span class="it">sound like you?</span></h2>
     <div class="personas">
-      <article><div class="mock pslot m02" data-visual="02">
+      <article><figure class="vis"><div class="mock m02" data-visual="02">
   <div class="bar2"><b>Ads Manager</b><span class="warn">Last opened 94 days ago</span></div>
   <div class="rows2">
     <div><i class="d on"></i><em>Winter promo &mdash; broad</em><s>$1,182</s></div>
@@ -1457,8 +1511,8 @@
     <div><i class="d on"></i><em>Retargeting &mdash; 180d</em><s>$297</s></div>
   </div>
   <div class="fade2">Still spending &middot; $98/day</div>
-</div><span class="n">01</span><p><b>You set it up yourself</b> and haven&rsquo;t looked at it properly in months.</p></article>
-      <article><div class="mock pslot m03" data-visual="03">
+</div><figcaption><b>Ads left running</b></figcaption></figure><p><b>&ldquo;I set up my ads myself.&rdquo;</b>But I haven&rsquo;t checked them in months.</p></article>
+      <article><figure class="vis"><div class="mock m03" data-visual="03">
   <div class="doc">
     <b class="dt">Monthly performance report &middot; August</b>
     <p>Reach up 18% MoM as <mark>CBO exits the learning phase</mark> and blended ROAS stabilises across <mark>ASC+ and broad</mark> ad sets.</p>
@@ -1466,65 +1520,62 @@
     <p>Recommend increasing <mark>top-of-funnel budget</mark> by 20%.</p>
   </div>
   <span class="q q1">?</span><span class="q q2">?</span><span class="q q3">?</span>
-</div><span class="n">02</span><p><b>Someone else runs it</b> and you&rsquo;re not really across what they&rsquo;re doing.</p></article>
-      <article><div class="mock pslot m04" data-visual="04">
+</div><figcaption><b>A report you can&rsquo;t read</b></figcaption></figure><p><b>&ldquo;Someone else runs my ads.&rdquo;</b>But I&rsquo;m not sure what they&rsquo;re doing.</p></article>
+      <article><figure class="vis"><div class="mock m04" data-visual="04">
   <div class="slide"><b class="st">Meta performance &middot; Q3</b>
     <div class="chart"><div class="bars"><i style="--h:38%"></i><i style="--h:52%"></i><i style="--h:66%"></i><i style="--h:80%"></i></div>
       <svg class="line" viewBox="0 0 100 40" preserveAspectRatio="none"><path d="M4 30 L36 29 L68 31 L96 30"/></svg></div>
     <div class="leg"><span><i class="sp"></i>Spend</span><span><i class="ld"></i>Leads</span></div>
   </div>
   <span class="note">Built to win, or just to spend?</span>
-</div><span class="n">03</span><p><b>You&rsquo;ve got a person or a team on it</b> and you want to know if it&rsquo;s built to win or just to spend.</p></article>
+</div><figcaption><b>Spend goes up, leads don&rsquo;t</b></figcaption></figure><p><b>&ldquo;I have a team on it.&rdquo;</b>But I want to know if it&rsquo;s really working.</p></article>
     </div>
-    <p class="converge">Whichever one you are, you&rsquo;re paying for the same ads and you can&rsquo;t see where the money is going. <b>That&rsquo;s what this fixes.</b></p>
+    <p class="converge">Either way, you pay for ads and you can&rsquo;t see where the money goes. <b>This audit shows you.</b></p>
   </div>
 </section>
 
-<!-- 03 HOW IT WORKS ......................................... -->
-<section class="light" id="how">
+<!-- 3 WHAT YOU GET .......................................... -->
+<section class="light" id="get">
   <div class="wrap rv">
-    <h2 class="ah">Three steps.<span class="it">No call.</span></h2>
-    <div class="steps">
-      <article><span class="n">01</span><div class="mock sslot m05" data-visual="05">
-  <div class="phone sm"><div class="pscr ui">
-    <b class="h">Checkout</b>
-    <div class="line2"><em>Meta Campaign Audit</em><s>$97.00</s></div>
-    <div class="line2 m"><em>GST</em><s>$9.70</s></div>
-    <div class="line2 t"><em>Total</em><s>$106.70</s></div>
-    <span class="pay">Pay &rarr;</span>
-  </div></div>
-  <div class="panel5">
-    <b class="h">Intake &middot; 2 of 5</b>
-    <span class="fld">Average job value</span><span class="fld">Close rate</span>
-    <span class="ok"><svg viewBox="0 0 24 24"><path d="M4 12.5l5.5 5.5L20 7"/></svg>Read-only access granted</span>
+    <h2 class="ah">What you get<span class="it">for $97.</span></h2>
+    <p class="say">Three things, sent to your inbox within 48 hours. You keep them all.</p>
+    <div class="wyg">
+      <div class="wyg-a"><figure class="vis"><div class="scard" id="scard"></div><figcaption><b>A score out of 100.</b> <span>I check 10 things and give each one a mark out of 10.</span></figcaption></figure></div>
+      <div class="wyg-b">
+        <figure class="vis"><div class="screen">
+          <div class="bar"><i></i><i></i><i></i><span>Your walkthrough &middot; 14:22</span></div>
+          <figure>
+            <img src="assets/hf/cta-final-poster.jpg" alt="Luke recording a walkthrough inside a Meta ad account" loading="lazy">
+            <div class="play" aria-hidden="true"><b><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></b></div>
+            <figcaption class="cap">Recorded walkthrough &middot; your account, on screen</figcaption>
+          </figure>
+        </div><figcaption><b>A video walkthrough.</b> <span>I go through your account on screen and explain what I found.</span></figcaption></figure>
+        <figure class="vis"><div class="mock m10" data-visual="10">
+  <div class="page">
+    <div class="ph"><b>Action plan</b><span class="extag">Example</span></div>
+    <p class="pm">Biggest problem first</p>
+    <div class="pr"><i>01</i><div><b>Set your top campaign to get enquiries</b><em>Right now it&rsquo;s set to get clicks.</em></div><s>$1,182</s></div>
+    <div class="pr"><i>02</i><div><b>Make the page match the ad</b><em>Same offer, same words, same price.</em></div><s>~31</s></div>
+    <div class="pr"><i>03</i><div><b>Ask 4 questions, not 11</b><em>Name, phone, suburb, job type.</em></div><s>7</s></div>
   </div>
-</div><span class="who">You</span><h3>Pay and point me at it</h3><p>Pay the $97, fill in a short intake about your business, your numbers and the campaign, and give me read-only access to your Meta ad account. I can look, and that&rsquo;s all.</p></article>
-      <article><span class="n">02</span><div class="mock sslot m06 photo" data-visual="06">
-  <img src="assets/hf/work-v6.jpg" alt="Luke working through an ad account" loading="lazy">
-  <span class="pin2" style="left:18%;top:26%">1</span><span class="pin2" style="left:42%;top:58%">2</span><span class="pin2" style="left:80%;top:30%">3</span>
-</div><span class="who">Me</span><h3>I go through it</h3><p>Your ad account, your landing page and how the lead gets captured. All ten categories, scored against the same checklist every time. About an hour and a half of the same work I do for build clients.</p></article>
-      <article><span class="n">03</span><div class="mock sslot m07" data-visual="07">
-  <div class="mail">
-    <div class="mrow hot"><i class="av">AC</i><div><b>AutoConvert Digital</b><em>Your Meta Campaign Audit is ready</em>
-      <span class="att"><i>PDF</i>Audit report</span><span class="att"><i>&#9654;</i>Walkthrough &middot; 14:22</span></div><s>now</s></div>
-    <div class="mrow"><i class="av g"></i><div><b class="gl"></b><em class="gl s"></em></div><s>9:12</s></div>
-    <div class="mrow"><i class="av g"></i><div><b class="gl"></b><em class="gl s"></em></div><s>Tue</s></div>
-  </div>
-</div><span class="who">Within 48 hours</span><h3>It lands in your inbox</h3><p>Your scored report, a recorded walkthrough of your own account, and the three biggest fixes ranked by what they&rsquo;re costing you. The clock starts when your access comes through.</p></article>
+</div><figcaption><b>A fix list.</b> <span>Your 3 biggest problems, in order, and what each one costs you.</span></figcaption></figure>
+      </div>
     </div>
-    <div class="btns" style="margin-top:clamp(30px,3.4vw,44px)"><a class="btn" href="#buy" data-checkout>Get your audit &middot; $97 &rarr;</a></div>
+    <p class="say" style="margin-top:clamp(22px,2.6vw,32px)">Send it to whoever runs your ads. It&rsquo;s written so anyone can act on it.</p>
+    <div class="btns"><a class="btn" href="#buy" data-checkout>Get my audit &middot; $97 &rarr;</a></div>
   </div>
 </section>
 
-<!-- 04 WHAT I LOOK AT ....................................... -->
-<section class="dark artsec" id="look">
+<!-- 4 WHAT I CHECK .......................................... -->
+<section class="dark artsec" id="check">
   <div class="wrap rv">
-    <h2 class="ah">Ten categories.<span class="it">One score out of 100.</span></h2>
-    <p class="say">Five in your ad account, four on your landing page, and one on how the lead gets captured. Here&rsquo;s the kind of thing that turns up on an account that looks fine from the dashboard.</p>
+    <h2 class="ah">What I check.<span class="it">10 things, in 3 places.</span></h2>
+    <p class="say">Here&rsquo;s the kind of problem that hides in accounts that look fine at first glance.</p>
 
-    <div class="stagehd"><span>Stage 01</span><b>Your ad account</b><em>5 categories</em></div>
-    <div class="art">
-      <div class="chrome"><i></i><i></i><i></i><span>Ads Manager &middot; Campaigns &middot; last 30 days</span><span class="tag">Example account</span></div>
+    <div class="area"><b>Your ads</b><span>5 things checked</span></div>
+    <ul class="checks"><li>How your account is set up</li><li>Who sees your ads</li><li>Your ads and your offer</li><li>Your tracking</li><li>Your results vs similar businesses</li></ul>
+    <figure class="vis"><div class="art">
+      <div class="chrome"><i></i><i></i><i></i><span>Ads Manager &middot; last 30 days</span><span class="tag">Example account</span></div>
       <div class="body artscroll">
         <table class="amt">
           <thead><tr><th>Campaign</th><th>Objective</th><th>Budget</th><th>Results</th><th>Cost / result</th><th>Spend</th></tr></thead>
@@ -1539,16 +1590,17 @@
         <span class="pin" style="left:16px;top:100px">2</span>
         <span class="pin" style="right:24px;top:100px">3</span>
       </div>
-    </div>
+    </div><figcaption><b>Example ad account.</b> <span>Each purple number matches a note below.</span></figcaption></figure>
     <div class="findings f3">
-      <div class="finding"><b>1</b><p>Top campaign is optimising for <strong>Traffic</strong>, not Leads. Meta is buying you the cheapest clickers, not buyers.<em>$1,182 spent &middot; 0 leads attributed</em></p></div>
-      <div class="finding"><b>2</b><p>Two ad sets are targeting the same people. Audience overlap is <strong>34%</strong>, so you are bidding against yourself in the same auction.<em>Inflating your own cost per lead</em></p></div>
-      <div class="finding"><b>3</b><p>Cost per lead is <strong>$41.22</strong> against a $22.60 benchmark for this spend tier and objective.<em>Meta&rsquo;s own benchmark data, matched on spend</em></p></div>
+      <div class="finding"><b>1</b><p>Your top campaign is set to get <strong>clicks</strong>, not enquiries. So Facebook finds people who click, not people who buy.<em>$1,182 spent &middot; 0 enquiries</em></p></div>
+      <div class="finding"><b>2</b><p>Two of your ad groups show ads to <strong>the same people</strong>. You end up bidding against yourself.<em>This pushes up what each enquiry costs</em></p></div>
+      <div class="finding"><b>3</b><p>Each enquiry costs <strong>$41.22</strong>. Similar businesses on the same budget pay about $22.60.<em>From Meta&rsquo;s own data</em></p></div>
     </div>
 
-    <div class="stagehd"><span>Stage 02</span><b>Your landing page</b><em>4 categories &middot; checked on a phone, on mobile data, straight off the ad</em></div>
+    <div class="area"><b>Your landing page</b><span>4 things checked, on a phone</span></div>
+    <ul class="checks"><li>Does the page match the ad?</li><li>Does it look trustworthy?</li><li>Is the offer and button clear?</li><li>How fast does it load?</li></ul>
     <div class="twocol">
-      <div class="art">
+      <figure class="vis"><div class="art">
         <div class="chrome"><i></i><i></i><i></i><span>yourbusiness.com.au/winter-offer</span><span class="tag">Example page</span></div>
         <div class="body">
           <div class="lpw">
@@ -1564,107 +1616,95 @@
           <span class="pin" style="right:20px;top:120px">2</span>
           <span class="pin" style="left:14px;top:256px">3</span>
         </div>
-      </div>
+      </div><figcaption><b>Example landing page on a phone.</b> <span>Each purple number matches a note. The red line is where the screen ends.</span></figcaption></figure>
       <div class="findings" style="grid-template-columns:1fr;margin-top:0;align-content:start">
-        <div class="finding"><b>1</b><p>Your ad promises <strong>&ldquo;$99 winter service&rdquo;</strong>. The page says &ldquo;Quality you can trust since 1998&rdquo;. Different promise, different words.<em>Message match &middot; the first thing I check</em></p></div>
-        <div class="finding"><b>2</b><p>The only call to action sits <strong>below the fold on mobile</strong>, where 78% of your traffic arrives.<em>They have to hunt for the thing you paid for</em></p></div>
-        <div class="finding"><b>3</b><p><strong>Eleven form fields</strong> on a first enquiry. Every one past the fourth is a reason to leave.<em>Fewer fields, fewer reasons to leave</em></p></div>
-        <div class="finding"><b>4</b><p>The page takes <strong>5.9 seconds</strong> to load on a phone on mobile data.<em>Checked the way your customer arrives</em></p></div>
+        <div class="finding"><b>1</b><p>The ad says <strong>&ldquo;$99 winter service&rdquo;</strong>. The page says &ldquo;Quality you can trust since 1998&rdquo;. People don&rsquo;t see what they clicked for.<em>The first thing I check</em></p></div>
+        <div class="finding"><b>2</b><p>On a phone, you have to <strong>scroll to find the button</strong>. 78% of this page&rsquo;s visitors are on a phone.<em>Make it easy to say yes</em></p></div>
+        <div class="finding"><b>3</b><p>The form asks <strong>11 questions</strong>. Every extra question gives people a reason to give up.<em>Four is usually enough</em></p></div>
+        <div class="finding"><b>4</b><p>The page takes <strong>5.9 seconds</strong> to load on a phone. Lots of people leave before then.<em>Tested the way your customers see it</em></p></div>
       </div>
     </div>
 
-    <div class="stagehd"><span>Stage 03</span><b>Lead capture</b><em>1 category</em></div>
-    <p class="strip">Your forms, your pixel and Conversions API, and whether each lead lands somewhere a person will actually see it.</p>
-    <div class="mock wide m08" data-visual="08">
-  <div class="nd "><span class="ic">&#9673;</span><b>Ad</b></div><span class="ar"></span><div class="nd "><span class="ic">&#9635;</span><b>Form</b></div><span class="ar"></span><div class="nd "><span class="ic">&#9678;</span><b>Pixel &amp; CAPI</b></div><span class="ar bad"><em>Not syncing</em></span><div class="nd dim"><span class="ic">&#9636;</span><b>CRM</b></div><span class="ar dim"></span><div class="nd dim"><span class="ic">&#9743;</span><b>Your phone</b></div>
+    <div class="area"><b>Your enquiry form</b><span>1 thing checked</span></div>
+    <ul class="checks"><li>Does each new lead reach someone who will call them back?</li></ul>
+    <figure class="vis"><div class="mock m08" data-visual="08">
+  <div class="nd "><span class="ic">&#9673;</span><b>Ad</b></div><span class="ar"></span><div class="nd "><span class="ic">&#9635;</span><b>Form</b></div><span class="ar"></span><div class="nd "><span class="ic">&#9678;</span><b>Tracking</b></div><span class="ar bad"><em>Not syncing</em></span><div class="nd dim"><span class="ic">&#9636;</span><b>CRM</b></div><span class="ar dim"></span><div class="nd dim"><span class="ic">&#9743;</span><b>Your phone</b></div>
   <span class="extag">Example</span>
-</div>
+</div><figcaption><b>Example: the leads stop here.</b> <span>The form works, but new leads never reach your phone.</span></figcaption></figure>
   </div>
 </section>
 
-<!-- 05 THE OUTCOME .......................................... -->
-<section class="light" id="outcome">
+<!-- 5 WHAT IT COSTS YOU ..................................... -->
+<section class="light" id="cost">
   <div class="wrap rv">
-    <h2 class="ah">You&rsquo;ll know<span class="it">what to fix first.</span></h2>
-    <p class="say">Every one of these is money you&rsquo;ve already paid for. It doesn&rsquo;t cost more ad spend to fix. It costs knowing which one to fix first.</p>
-    <div class="mock wide m09" data-visual="09">
-  <div class="half bf"><span class="lbl">Before</span>
-    <div class="chips"><span>CTR 2.1%</span><span>CPM $14.20</span><span>Reach 48,210</span><span>Freq 3.2</span><span>CPC $0.98</span><span>Impr. 91k</span><span>Link clicks 1,204</span></div>
-    <div class="bank">$2,958 out &middot; 68 leads &middot; <b>which ones worked?</b></div>
-  </div>
-  <div class="half af"><span class="lbl">After</span>
-    <div class="fx"><i>1</i><em>Switch top campaign off Traffic</em><s>$1,182/mo</s></div>
-    <div class="fx"><i>2</i><em>Match the page to the ad</em><s>~31 leads</s></div>
-    <div class="fx"><i>3</i><em>Cut the form to four fields</em><s>7 fewer</s></div>
-  </div>
-  <span class="extag">Example</span>
-</div>
-    <div class="plan" style="margin-top:clamp(24px,3vw,38px)">
-      <div class="planrow"><div class="rank">01</div><div><h4>Switch the top campaign off Traffic</h4><p>Rebuild it as a Leads campaign optimising for the event that matters. The spend is already there; it is buying the wrong thing.</p></div><div class="amt2">$1,182<small>per month, redirected</small></div></div>
-      <div class="planrow"><div class="rank">02</div><div><h4>Match the page headline to the ad</h4><p>One line. Same offer, same words, same price. Costs nothing and it is the biggest leak on the page.</p></div><div class="amt2">~31<small>enquiries / month at current traffic</small></div></div>
-      <div class="planrow"><div class="rank">03</div><div><h4>Cut the form from eleven fields to four</h4><p>Name, phone, suburb, job type. Everything else you can ask on the call.</p></div><div class="amt2">7<small>reasons to leave, removed</small></div></div>
-    </div>
-    <p class="stagenote" style="margin-top:16px">Dollar figures come from your own account and the two numbers on the intake form &middot; example shown</p>
+    <h2 class="ah">What one problem<span class="it">can cost you.</span></h2>
+    <p class="say">Take the example account above. One setting was wrong.</p>
     <div class="maths">
-      <div><b>$3,000</b><span>a month on Meta</span></div>
-      <div><b class="hi">$1,182</b><span>of it buying clicks, not leads</span></div>
-      <div><b>$14,184</b><span>a year at that rate</span></div>
+      <div><b>$3,000</b><span>spent on ads each month</span></div>
+      <div><b class="hi">$1,182</b><span>of it buying clicks, not enquiries</span></div>
+      <div><b>$14,184</b><span>wasted over a year</span></div>
       <div><b>$97</b><span>to find it</span></div>
     </div>
-    <div class="leverage">
-      <p><b>It changes the conversation you&rsquo;re already having</b>
-      Whether that&rsquo;s with your agency, your freelancer, or the person in your business who &ldquo;does the marketing&rdquo;, you&rsquo;ll be pointing at a number instead of a feeling.</p>
-    </div>
+    <figure class="vis"><div class="mock m09" data-visual="09">
+  <div class="half before"><span class="lab">Before</span>
+    <div class="chips"><span>CTR 2.1%</span><span>CPM $14.20</span><span>Reach 48,210</span><span>Freq 3.2</span><span>CPC $0.98</span><span>Impr. 91k</span><span>Link clicks 1,204</span></div>
+    <div class="bank">$2,958 spent &middot; 68 leads &middot; <b>what worked?</b></div>
+  </div>
+  <div class="half after"><span class="lab">After</span>
+    <div class="fx"><i>1</i><em>Set top campaign to get enquiries</em><s>$1,182/mo</s></div>
+    <div class="fx"><i>2</i><em>Make the page match the ad</em><s>~31 leads</s></div>
+    <div class="fx"><i>3</i><em>Ask 4 questions, not 11</em><s>7 fewer</s></div>
+  </div>
+  <span class="extag">Example</span>
+</div><figcaption><b>Before and after the audit.</b> <span>Lots of numbers, then 3 clear fixes.</span></figcaption></figure>
   </div>
 </section>
 
-<!-- 06 WHAT'S INCLUDED ...................................... -->
-<section class="dark artsec" id="included">
+<!-- 6 HOW IT WORKS .......................................... -->
+<section class="dark" id="how">
   <div class="wrap rv">
-    <h2 class="ah">What lands<span class="it">in your inbox.</span></h2>
-    <p class="say">Three things, in 48 hours, in the same format every time. That&rsquo;s what keeps a proper review at $97.</p>
-    <div class="twocol">
-      <div class="scard" id="scard"></div>
-      <div>
-        <div class="screen">
-          <div class="bar"><i></i><i></i><i></i><span>Your walkthrough &middot; 14:22</span></div>
-          <figure>
-            <img src="assets/hf/cta-final-poster.jpg" alt="Luke recording a walkthrough inside a Meta ad account" loading="lazy">
-            <div class="play" aria-hidden="true"><b><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></b></div>
-            <figcaption class="cap">Recorded walkthrough &middot; your account, on screen</figcaption>
-          </figure>
-        </div>
-        <p class="stagenote" style="margin-top:14px">Watch it twice. Send it to whoever runs your ads. It&rsquo;s yours.</p>
-        <div class="mock m10" data-visual="10">
-  <div class="page">
-    <div class="ph"><b>Action plan</b><span class="extag">Example</span></div>
-    <p class="pm">Ranked by what each one is costing you</p>
-    <div class="pr"><i>01</i><div><b>Switch the top campaign off Traffic</b><em>Rebuild as Leads, optimising for the event that matters.</em></div><s>$1,182</s></div>
-    <div class="pr"><i>02</i><div><b>Match the page headline to the ad</b><em>Same offer, same words, same price.</em></div><s>~31</s></div>
-    <div class="pr"><i>03</i><div><b>Cut the form to four fields</b><em>Name, phone, suburb, job type.</em></div><s>7</s></div>
+    <h2 class="ah">How it<span class="it">works.</span></h2>
+    <div class="steps">
+      <article><span class="n">1</span><h3>You pay and fill in a short form</h3><p>Pay $97 + GST. Answer a few questions about your business. Then give me &ldquo;view only&rdquo; access to your ad account. I can look, but I can&rsquo;t change anything.</p><figure class="vis"><div class="mock m05" data-visual="05">
+  <div class="phone sm"><div class="pscr ui">
+    <b class="h">Checkout</b>
+    <div class="line2"><em>Meta Campaign Audit</em><s>$97.00</s></div>
+    <div class="line2 m"><em>GST</em><s>$9.70</s></div>
+    <div class="line2 t"><em>Total</em><s>$106.70</s></div>
+    <span class="pay">Pay &rarr;</span>
+  </div></div>
+  <div class="panel5">
+    <b class="h">Intake &middot; 2 of 5</b>
+    <span class="fld">Average job value</span><span class="fld">Close rate</span>
+    <span class="ok"><svg viewBox="0 0 24 24"><path d="M4 12.5l5.5 5.5L20 7"/></svg>View-only access given</span>
   </div>
-</div>
-      </div>
+</div><figcaption><b>The checkout and form.</b></figcaption></figure></article>
+      <article><span class="n">2</span><h3>I check everything</h3><p>I go through your ads, your page and your form, using the same checklist every time. It takes me about an hour and a half.</p><figure class="vis"><div class="mock m06 photo" data-visual="06">
+  <img src="assets/hf/work-v6.jpg" alt="Luke working through an ad account" loading="lazy">
+  <span class="pin2" style="left:18%;top:26%">1</span><span class="pin2" style="left:42%;top:58%">2</span><span class="pin2" style="left:80%;top:30%">3</span>
+</div><figcaption><b>Me, checking your account.</b></figcaption></figure></article>
+      <article><span class="n">3</span><h3>You get your report</h3><p>Within 48 hours of getting access, I email you your score, your video and your fix list.</p><figure class="vis"><div class="mock m07" data-visual="07">
+  <div class="mail">
+    <div class="mrow hot"><i class="av">AC</i><div><b>AutoConvert Digital</b><em>Your Meta Campaign Audit is ready</em>
+      <span class="att"><i>PDF</i>Audit report</span><span class="att"><i>&#9654;</i>Walkthrough &middot; 14:22</span></div><s>now</s></div>
+    <div class="mrow"><i class="av g"></i><div><b class="gl"></b><em class="gl s"></em></div><s>9:12</s></div>
+    <div class="mrow"><i class="av g"></i><div><b class="gl"></b><em class="gl s"></em></div><s>Tue</s></div>
+  </div>
+</div><figcaption><b>Your report arrives by email.</b></figcaption></figure></article>
     </div>
-    <div class="deliv3">
-      <article><span class="n">01</span><h3>A scored report</h3><p>Ten categories, each out of 10, with the reasoning behind every mark.</p></article>
-      <article><span class="n">02</span><h3>A recorded walkthrough</h3><p>Me on screen inside your own account. Yours to keep and send to whoever runs your ads.</p></article>
-      <article><span class="n">03</span><h3>An action plan</h3><p>The three biggest fixes, in order, costed against your own numbers.</p></article>
-    </div>
-    <div class="btns" style="margin-top:clamp(28px,3vw,40px)"><a class="btn" href="#buy" data-checkout>Get your audit &middot; $97 &rarr;</a></div>
+    <div class="btns" style="margin-top:clamp(30px,3.4vw,44px)"><a class="btn" href="#buy" data-checkout>Get my audit &middot; $97 &rarr;</a></div>
   </div>
 </section>
 
-<!-- 07 PROOF ................................................ -->
-<section class="light" id="proof">
+<!-- 7 WHO CHECKS ............................................ -->
+<section class="light" id="who">
   <div class="wrap rv">
-    <h2 class="ah">10+ years<span class="it">inside other people&rsquo;s ad accounts.</span></h2>
-    <p class="say">Before AutoConvert, at my previous business, I ran Meta campaigns for service businesses in more than ten niches: trades, property, cosmetic clinics, hospitality training. That&rsquo;s what the checklist is built from.</p>
+    <h2 class="ah">Who checks<span class="it">your ads.</span></h2>
+    <p class="say">Me, Luke Wade. I&rsquo;ve run Facebook ads for over 10 years, for businesses in more than 10 industries. I do every audit myself.</p>
     <div class="proofrow">
-      <div class="mock m11 photo" data-visual="11">
+      <figure class="vis"><div class="mock m11 photo" data-visual="11">
   <img src="assets/people/luke-avatar-full.jpg" alt="Luke Wade" loading="lazy">
-  <span class="cap11"><b>Luke Wade</b>The one inside your account</span>
-</div>
+</div><figcaption><b>Luke Wade.</b> <span>The person inside your account.</span></figcaption></figure>
       <div class="twocol proof">
       <div class="quotecard"><q>Luke&rsquo;s ability to understand our business and speak with our voice is his greatest asset and perhaps the biggest problem we&rsquo;ve had in the past with previous marketing efforts.</q><div class="who">Peter Giannakis &middot; Director, HG Coffee School &middot; from my previous business</div></div>
       <div class="quotecard"><q>Leads used to get followed up whenever I found a spare minute between clients. Luke helped streamline our enquiries and lead capture so everything is in one place and tracked from start to finish. In this game, the fastest salesman gets the deal.</q><div class="who">Sam Roberts &middot; Principal Dealer, Rev&eacute; Auto Haus</div></div>
@@ -1673,42 +1713,42 @@
   </div>
 </section>
 
-<!-- 08 RISK REVERSAL ........................................ -->
-<section class="dark honest" id="straight">
+<!-- 8 WHY IT'S FAIR ......................................... -->
+<section class="dark honest" id="fair">
   <div class="wrap rv">
-    <h2 class="ah">Yes, I also<span class="it">sell the fix.</span></h2>
-    <p class="say" style="max-width:56ch">So you should be sceptical of an audit from me. Here&rsquo;s what keeps this one straight.</p>
+    <h2 class="ah">This is not<span class="it">a sales pitch.</span></h2>
+    <p class="say" style="max-width:56ch">I also sell ad services, so you might wonder if the audit is fair. Here&rsquo;s how I keep it honest.</p>
     <div class="risks" id="risks"></div>
   </div>
 </section>
 
-<!-- 09 CLOSE ................................................ -->
+<!-- 9 PRICE ................................................. -->
 <section class="dark final final-film" id="buy">
   <video class="bgvid" src="assets/hf/cta-final.h264.mp4" poster="assets/hf/cta-final-poster.jpg" muted loop playsinline preload="metadata" data-inview aria-hidden="true"></video>
   <div class="fscrim" aria-hidden="true"></div>
   <div class="wrap inner rv"><div>
-    <h2 class="ah">The best $97<span class="it">you&rsquo;ll spend this month.</span></h2>
-    <p class="lede">You&rsquo;re going to spend the same on Meta next month whether you know where it&rsquo;s going or not. $97 and two days tells you. You keep the report either way.</p>
+    <h2 class="ah">Get your audit<span class="it">for $97.</span></h2>
+    <p class="lede">You&rsquo;ll spend money on ads next month anyway. Find out where it&rsquo;s going first.</p>
     <div class="stack pricecard">
       <ul>
-        <li><span class="tk"><svg viewBox="0 0 24 24"><path d="M4 12.5l5.5 5.5L20 7"/></svg></span><span><b>Scored report</b> &mdash; ten categories, out of 100</span></li>
-        <li><span class="tk"><svg viewBox="0 0 24 24"><path d="M4 12.5l5.5 5.5L20 7"/></svg></span><span><b>Recorded walkthrough</b> of your own account</span></li>
-        <li><span class="tk"><svg viewBox="0 0 24 24"><path d="M4 12.5l5.5 5.5L20 7"/></svg></span><span><b>Action plan</b> &mdash; three fixes, ranked and costed</span></li>
-        <li><span class="tk"><svg viewBox="0 0 24 24"><path d="M4 12.5l5.5 5.5L20 7"/></svg></span><span><b>Money back</b> if it doesn&rsquo;t give you steps you can act on</span></li>
+        <li><span class="tk"><svg viewBox="0 0 24 24"><path d="M4 12.5l5.5 5.5L20 7"/></svg></span><span><b>A score out of 100</b>, with a mark for each of 10 things</span></li>
+        <li><span class="tk"><svg viewBox="0 0 24 24"><path d="M4 12.5l5.5 5.5L20 7"/></svg></span><span><b>A video</b> of me going through your account</span></li>
+        <li><span class="tk"><svg viewBox="0 0 24 24"><path d="M4 12.5l5.5 5.5L20 7"/></svg></span><span><b>A fix list</b> of your 3 biggest problems, in order</span></li>
+        <li><span class="tk"><svg viewBox="0 0 24 24"><path d="M4 12.5l5.5 5.5L20 7"/></svg></span><span><b>Your money back</b> if it doesn&rsquo;t help</span></li>
       </ul>
-      <div class="rule"><b>$97 <span class="gst">+ GST</span></b><em>Foundation price until 31 December 2026 &middot; $297 from January</em>
-        <small>If you go on to build with me, the $97 comes off your invoice in full.</small></div>
+      <div class="rule"><b>$97 <span class="gst">+ GST</span></b><em>This price ends 31 December 2026. Then it&rsquo;s $297.</em>
+        <small>If you hire me afterwards, the $97 comes off your bill.</small></div>
     </div>
-    <div class="btns" style="margin-top:26px"><a class="btn" href="#buy" data-checkout>Get your audit &middot; $97 &rarr;</a></div>
-    <p class="fineprint">48-hour turnaround &middot; No sales call &middot; Money back guarantee</p>
+    <div class="btns" style="margin-top:26px"><a class="btn" href="#buy" data-checkout>Get my audit &middot; $97 &rarr;</a></div>
+    <p class="fineprint">Report in 48 hours &middot; No sales call &middot; Money back if it doesn&rsquo;t help</p>
   </div></div>
 </section>
 
-<!-- 10 FAQ .................................................. -->
+<!-- 10 QUESTIONS ............................................ -->
 <section class="dark faqsec" id="faq">
   <div class="grad" aria-hidden="true"></div>
   <div class="wrap faqwrap rv">
-    <div class="faqhead"><h2 class="ah">Questions.</h2></div>
+    <div class="faqhead"><h2 class="ah">Your questions,<span class="it">answered.</span></h2></div>
     <div id="faqlist"></div>
   </div>
 </section>
@@ -1716,8 +1756,8 @@
 </main>
 
 <div class="sticky" id="sticky" aria-hidden="true">
-  <span><b>$97</b> + GST &middot; 48 hrs &middot; money back</span>
-  <a class="btn" href="#buy" data-checkout tabindex="-1">Get your audit &rarr;</a>
+  <span><b>$97</b> + GST &middot; report in 48 hours</span>
+  <a class="btn" href="#buy" data-checkout tabindex="-1">Get my audit &rarr;</a>
 </div>
 
 <footer class="lp">
@@ -1763,16 +1803,16 @@ const reduce=matchMedia("(prefers-reduced-motion:reduce)").matches, E=id=>docume
 const mk=(ok,t)=>'<li><span class="mk"><svg viewBox="0 0 24 24"><path d="'+(ok?"M4 12.5l5.5 5.5L20 7":"M6 6l12 12M18 6L6 18")+'"/></svg></span><span>'+t+'</span></li>';
 
 /* scorecard: ten categories, each out of 10, adding to the score out of 100 */
-const AD=[["Account structure & health",7],["Targeting & audience",5],["Creative & offer",6],["Tracking & data quality",3],["Performance vs benchmark",6]];
-const PG=[["Message match",4],["Trust & credibility",7],["Offer & call to action",5],["Speed, mobile & technical",7]];
-const LC=[["Lead capture & follow-through",4]];
+const AD=[["Account set-up",7],["Who sees your ads",5],["Your ads and offer",6],["Tracking",3],["Results vs similar businesses",6]];
+const PG=[["Page matches the ad",4],["Looks trustworthy",7],["Clear offer and button",5],["Speed on a phone",7]];
+const LC=[["Leads reach a person",4]];
 const TOTAL=[...AD,...PG,...LC].reduce((t,[,v])=>t+v,0);
 const rows=a=>a.map(([k,v])=>'<div class="row"><em>'+k+'</em><s>'+v+'/10</s><div class="bar"><i style="--w:'+(v*10)+'%"></i></div></div>').join("");
-E("scard").innerHTML='<div class="top"><div class="t">Ads audit scorecard</div><div class="ex">Example</div></div>'+
- '<div class="tot"><b>'+TOTAL+'</b><span>Out of 100 across stages 01&ndash;03</span></div>'+
- '<h4>Stage 01 &middot; Your ad account</h4>'+rows(AD)+
- '<h4>Stage 02 &middot; Your landing page</h4>'+rows(PG)+
- '<h4>Stage 03 &middot; Lead capture</h4>'+rows(LC);
+E("scard").innerHTML='<div class="top"><div class="t">Your audit score</div><div class="ex">Example</div></div>'+
+ '<div class="tot"><b>'+TOTAL+'</b><span>Out of 100</span></div>'+
+ '<h4>Your ads</h4>'+rows(AD)+
+ '<h4>Your landing page</h4>'+rows(PG)+
+ '<h4>Your enquiry form</h4>'+rows(LC);
 
 
 /* risk row */
@@ -1784,24 +1824,24 @@ const ICO={
  rank:'<path d="M4 20V14M10 20V9M16 20V4"/>',
  paid:'<path d="M12 3v18"/><path d="M16.5 7.5C16.5 6 14.5 5 12 5S7.5 6 7.5 8s2 2.6 4.5 3 4.5 1.3 4.5 3.2S14.5 19 12 19s-4.5-1-4.5-2.5"/>'};
 const RISKS=[
- ["list","The checklist is fixed","Same ten categories, scored the same way on every account, whether you ever speak to me again or not."],
- ["rank","Ranked by what it costs you","The fixes come out in order of what they&rsquo;re costing you, not what I&rsquo;d charge to do them. Most are built so you or your current provider can action them without me."],
- ["lock","I can&rsquo;t change anything","Read-only access to your ad account. Nothing to install, no access to your website or your CRM."],
- ["back","You can have it back","If it doesn&rsquo;t give you steps you can act on, or you just want your money back, email me and I&rsquo;ll refund the $97. No form, no call to talk you out of it."]];
+ ["list","Same checklist every time","Every account is checked against the same 10 things. No matter who you are."],
+ ["rank","Biggest problem first","Fixes are listed by how much they cost you. Not by what I could sell you."],
+ ["lock","I can&rsquo;t change anything","You give me &ldquo;view only&rdquo; access. I can look, but I can&rsquo;t touch."],
+ ["back","Your money back","Not happy? Email me and I&rsquo;ll refund your $97. No questions, no call."]];
 E("risks").innerHTML=RISKS.map(([i,h,p])=>
  '<article><div class="ic"><svg viewBox="0 0 24 24">'+ICO[i]+'</svg></div><h3>'+h+'</h3><p>'+p+'</p></article>').join("");
 
 /* faq */
 const FAQ=[
- ["I already know some of it needs work. What do I get out of this?","The specifics, and the order. Knowing something needs attention and knowing which three things are draining the most spend this month are different problems, and the second one is the one you can act on."],
- ["How do you review my landing page without access?","Your page is public, so I review it the way your customers see it, against a conversion checklist: message match, speed, mobile, the form, the offer, and the proof. Anything that needs behind-the-scenes access gets looked at if we build."],
- ["When does the 48 hours start?","From when your read-only access comes through. I’ll email to confirm it’s landed, and the clock starts then."],
- ["I already have an agency, a CRM, or a website I like. Is this still for me?","Yes. The audit works whoever runs your ads, it’s yours to share with them, and it’ll tell you straight what’s worth keeping."],
- ["Do I have to work with you afterwards?","No. There’s no contract and no call. Most of what’s in the report you or your current provider can action without me."],
- ["Can you just take it over?","Yes, if that’s what you want and your spend supports it. You’d keep full oversight and I’d come to you with updates rather than wait to be asked. That conversation happens after the audit, not before."],
- ["How soon would I see a difference if I act on it?","Some fixes work from day one, like faster replies and clearer pages. New ads and offers usually need a few weeks of testing on real spend before anyone can say what’s working."],
- ["I run Google Ads, not Meta. Can you audit that?","The audit focuses on Meta. If Google is where most of your spend goes, apply for a strategy call and we’ll talk it through."],
- ["I’m a coach, a course creator, or I run an online store. Is this for me?","Not this one. This audit scores a funnel that ends in an enquiry, and yours doesn’t. Coaching and course money is won on the webinar, the application and the follow-up sequence. A store has a cart and a catalogue where the enquiry would be. Same methodology, different scoring. Apply for a strategy call and we’ll look at the right part of your funnel."]];
+ ["I already know my ads need work. Why do I need this?","Knowing something is wrong is not the same as knowing what to fix first. You get the 3 biggest problems, in order, with what each one costs you."],
+ ["When does the 48 hours start?","When your &ldquo;view only&rdquo; access comes through. I&rsquo;ll email you to say it&rsquo;s working, and the clock starts then."],
+ ["How do you check my page without access?","Your page is public. I look at it the way your customers do, on a phone, and check it against my list."],
+ ["Someone else runs my ads. Is this still for me?","Yes. The report is yours to share with them. It tells you straight what&rsquo;s working and what isn&rsquo;t."],
+ ["Do I have to work with you afterwards?","No. There&rsquo;s no contract and no call. Most fixes can be done by you or whoever runs your ads now."],
+ ["Can you fix it for me?","Yes, if you want. We can talk about that after the audit, not before."],
+ ["How soon will I see a difference?","Some fixes work straight away, like a clearer page. New ads usually need a few weeks of testing."],
+ ["I run Google Ads, not Facebook. Can you check those?","This audit is for Facebook and Instagram ads. If Google is where most of your money goes, book a strategy call and we&rsquo;ll talk it through."],
+ ["I sell online or run courses. Is this for me?","Not this one. This audit is for businesses that get enquiries, like trades and services. Book a strategy call and we&rsquo;ll look at the right part of your business."]];
 const fq=E("faqlist");
 fq.innerHTML=FAQ.map(([q,a],i)=>'<div class="qa'+(i===0?" open":"")+'"><button type="button" aria-expanded="'+(i===0)+'">'+q+'<span class="pm">+</span></button><div class="a"><p>'+a+'</p></div></div>').join("");
 fq.querySelectorAll(".qa").forEach(qa=>{const b=qa.querySelector("button"),a=qa.querySelector(".a");
@@ -1809,7 +1849,7 @@ fq.querySelectorAll(".qa").forEach(qa=>{const b=qa.querySelector("button"),a=qa.
  b.onclick=()=>{const o=qa.classList.toggle("open");b.setAttribute("aria-expanded",o);a.style.height=o?a.scrollHeight+"px":"0px";};});
 
 /* banner */
-const MARQ=["Pay $97","Read-only access","10 categories scored","Recorded walkthrough","Top 3 fixes, ranked","48-hour turnaround","Money back guarantee"];
+const MARQ=["Report in 48 hours","View-only access","10 things checked","Video walkthrough","Your top 3 fixes","No sales call","Money back"];
 const run=E("marqA"); if(run){const one=MARQ.map(t=>'<span>'+t+'</span><s>&middot;&middot;</s>').join("");run.innerHTML=one+one+one+one;}
 
 /* header */
