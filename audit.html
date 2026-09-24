@@ -1219,6 +1219,24 @@
     .deliv3 article:last-child{border-bottom:0}
     .steps{gap:30px}
   }
+
+  /* v7: image placeholders */
+  .slot p{max-width:40ch}
+  .herovis{display:grid;gap:16px}
+  .herovis .quotecard{padding:20px 22px}
+  .herovis .quotecard q{font-size:15.5px}
+  .pslot{margin-bottom:18px;padding:16px;gap:8px}
+  .pslot p{font-size:12px;color:color-mix(in srgb,#fff 70%,transparent)}
+  .pfield .slot{border-color:color-mix(in srgb,#fff 35%,transparent);background:color-mix(in srgb,#fff 5%,transparent)}
+  .pfield .mk{color:#fff;border-color:color-mix(in srgb,#fff 45%,transparent);background:color-mix(in srgb,#fff 8%,transparent)}
+  .sslot{margin:18px 0 0;padding:16px}
+  .sslot p{font-size:12.5px}
+  .slot.wide{margin-top:clamp(18px,2.2vw,28px)}
+  #outcome .slot.wide{margin:0 0 clamp(24px,3vw,36px)}
+  #included .slot{margin-top:18px}
+  .proofrow{display:grid;grid-template-columns:minmax(0,.42fr) minmax(0,1fr);gap:20px;align-items:stretch}
+  .proofrow .twocol{grid-template-columns:1fr}
+  @media(max-width:900px){.proofrow{grid-template-columns:1fr}.proofrow .slot{aspect-ratio:4/3!important}}
 </style>
 
 <header id="hdr">
@@ -1239,16 +1257,18 @@
   <div class="envbg" aria-hidden="true"></div>
   <div class="wrap inner rv">
     <div>
-      <p class="fineprint" style="margin:0 0 18px">The Meta Campaign Audit</p>
       <h1 class="ah">More revenue,<span class="it">same ad spend.</span></h1>
       <p class="lede" style="max-width:52ch">A full review of your Meta ads, your landing page and how your leads get captured, scored out of 100 against the first three stages of the Click-to-Close Circuit&trade;. Done by me, not a junior.</p>
       <div class="price-line"><span class="amt">$97</span><span class="was">+ GST &middot; Foundation price until 31 Dec</span></div>
       <div class="btns" style="margin-top:22px" id="heroCta"><a class="btn" href="#buy" data-checkout>Get your audit &middot; $97 &rarr;</a></div>
       <p class="fineprint">48-hour turnaround &middot; No sales call &middot; Money back guarantee</p>
     </div>
+    <div class="herovis">
+      <div class="slot " style="aspect-ratio:5/4"><span class="mk">Visual 01 · Hero</span><p>The finished audit: scorecard reading 54/100 on a laptop, the Loom walkthrough on a phone beside it. Angled, lit in the purple, bleeding off the bottom edge so the page reads as &ldquo;keep scrolling&rdquo;.</p></div>
     <div class="quotecard">
       <q>We saw an immediate increase in results; more leads being delivered, the cost per lead decreasing, amazing quality of creative, and well-thought-out copy that converts.</q>
       <div class="who">Dav Lipasaar &middot; Director, SAAR Media &amp; Entertainment &middot; from my previous business</div>
+    </div>
     </div>
   </div>
 </section>
@@ -1258,12 +1278,11 @@
 <!-- 02 PROBLEM: ONE OF THREE ................................ -->
 <section class="pfield" id="you">
   <div class="wrap rv">
-    <p class="kick">Who this is for</p>
     <h2 class="ah">You&rsquo;re probably<span class="it">one of three.</span></h2>
     <div class="personas">
-      <article><span class="n">01</span><p><b>You set it up yourself</b> and haven&rsquo;t looked at it properly in months.</p></article>
-      <article><span class="n">02</span><p><b>Someone else runs it</b> and you&rsquo;re not really across what they&rsquo;re doing.</p></article>
-      <article><span class="n">03</span><p><b>You&rsquo;ve got a person or a team on it</b> and you want to know if it&rsquo;s built to win or just to spend.</p></article>
+      <article><div class="slot pslot" style="aspect-ratio:16/10"><span class="mk">Visual 02 · Persona 1</span><p>Owner at the kitchen bench after hours, phone in hand, Ads Manager open, clearly hasn&rsquo;t looked in a while.</p></div><span class="n">01</span><p><b>You set it up yourself</b> and haven&rsquo;t looked at it properly in months.</p></article>
+      <article><div class="slot pslot" style="aspect-ratio:16/10"><span class="mk">Visual 03 · Persona 2</span><p>Owner reading a monthly report from their agency, a line of jargon highlighted, a question mark in the margin.</p></div><span class="n">02</span><p><b>Someone else runs it</b> and you&rsquo;re not really across what they&rsquo;re doing.</p></article>
+      <article><div class="slot pslot" style="aspect-ratio:16/10"><span class="mk">Visual 04 · Persona 3</span><p>A small team round a screen: the marketer presenting, the owner arms folded, weighing it up.</p></div><span class="n">03</span><p><b>You&rsquo;ve got a person or a team on it</b> and you want to know if it&rsquo;s built to win or just to spend.</p></article>
     </div>
     <p class="converge">Whichever one you are, you&rsquo;re paying for the same ads and you can&rsquo;t see where the money is going. <b>That&rsquo;s what this fixes.</b></p>
   </div>
@@ -1272,12 +1291,11 @@
 <!-- 03 HOW IT WORKS ......................................... -->
 <section class="light" id="how">
   <div class="wrap rv">
-    <p class="kick">How it works</p>
     <h2 class="ah">Three steps.<span class="it">No call.</span></h2>
     <div class="steps">
-      <article><span class="n">01</span><span class="who">You</span><h3>Pay and point me at it</h3><p>Pay the $97, fill in a short intake about your business, your numbers and the campaign, and give me read-only access to your Meta ad account. I can look, and that&rsquo;s all.</p></article>
-      <article><span class="n">02</span><span class="who">Me</span><h3>I go through it</h3><p>Your ad account, your landing page and how the lead gets captured. All ten categories, scored against the same checklist every time. About an hour and a half of the same work I do for build clients.</p></article>
-      <article><span class="n">03</span><span class="who">Within 48 hours</span><h3>It lands in your inbox</h3><p>Your scored report, a recorded walkthrough of your own account, and the three biggest fixes ranked by what they&rsquo;re costing you. The clock starts when your access comes through.</p></article>
+      <article><span class="n">01</span><div class="slot sslot" style="aspect-ratio:4/3"><span class="mk">Visual 05 · Step 1</span><p>Checkout and the short intake form on a phone, with the &ldquo;grant read-only access&rdquo; screen from Meta Business Settings.</p></div><span class="who">You</span><h3>Pay and point me at it</h3><p>Pay the $97, fill in a short intake about your business, your numbers and the campaign, and give me read-only access to your Meta ad account. I can look, and that&rsquo;s all.</p></article>
+      <article><span class="n">02</span><div class="slot sslot" style="aspect-ratio:4/3"><span class="mk">Visual 06 · Step 2</span><p>Luke at the desk, Ads Manager on the big screen, annotations going on. Real, not staged-glossy.</p></div><span class="who">Me</span><h3>I go through it</h3><p>Your ad account, your landing page and how the lead gets captured. All ten categories, scored against the same checklist every time. About an hour and a half of the same work I do for build clients.</p></article>
+      <article><span class="n">03</span><div class="slot sslot" style="aspect-ratio:4/3"><span class="mk">Visual 07 · Step 3</span><p>An inbox notification: &ldquo;Your audit is ready&rdquo;, with the PDF and the Loom link attached.</p></div><span class="who">Within 48 hours</span><h3>It lands in your inbox</h3><p>Your scored report, a recorded walkthrough of your own account, and the three biggest fixes ranked by what they&rsquo;re costing you. The clock starts when your access comes through.</p></article>
     </div>
     <div class="btns" style="margin-top:clamp(30px,3.4vw,44px)"><a class="btn" href="#buy" data-checkout>Get your audit &middot; $97 &rarr;</a></div>
   </div>
@@ -1286,7 +1304,6 @@
 <!-- 04 WHAT I LOOK AT ....................................... -->
 <section class="dark artsec" id="look">
   <div class="wrap rv">
-    <p class="kick">What I look at</p>
     <h2 class="ah">Ten categories.<span class="it">One score out of 100.</span></h2>
     <p class="say">Five in your ad account, four on your landing page, and one on how the lead gets captured. Here&rsquo;s the kind of thing that turns up on an account that looks fine from the dashboard.</p>
 
@@ -1343,15 +1360,16 @@
 
     <div class="stagehd"><span>Stage 03</span><b>Lead capture</b><em>1 category</em></div>
     <p class="strip">Your forms, your pixel and Conversions API, and whether each lead lands somewhere a person will actually see it.</p>
+    <div class="slot wide" style="aspect-ratio:21/6"><span class="mk">Visual 08 · Lead capture flow</span><p>A simple left-to-right diagram: ad → form → pixel &amp; Conversions API → CRM → a phone buzzing with the new lead. One broken link marked in red.</p></div>
   </div>
 </section>
 
 <!-- 05 THE OUTCOME .......................................... -->
 <section class="light" id="outcome">
   <div class="wrap rv">
-    <p class="kick">The outcome</p>
     <h2 class="ah">You&rsquo;ll know<span class="it">what to fix first.</span></h2>
     <p class="say">Every one of these is money you&rsquo;ve already paid for. It doesn&rsquo;t cost more ad spend to fix. It costs knowing which one to fix first.</p>
+    <div class="slot wide" style="aspect-ratio:21/7"><span class="mk">Visual 09 · Before / after</span><p>Split image. Left: a cluttered dashboard and a bank balance that disagrees with it. Right: the same account with three numbered fixes circled. Same data, now in order.</p></div>
     <div class="plan" style="margin-top:clamp(24px,3vw,38px)">
       <div class="planrow"><div class="rank">01</div><div><h4>Switch the top campaign off Traffic</h4><p>Rebuild it as a Leads campaign optimising for the event that matters. The spend is already there; it is buying the wrong thing.</p></div><div class="amt2">$1,182<small>per month, redirected</small></div></div>
       <div class="planrow"><div class="rank">02</div><div><h4>Match the page headline to the ad</h4><p>One line. Same offer, same words, same price. Costs nothing and it is the biggest leak on the page.</p></div><div class="amt2">~31<small>enquiries / month at current traffic</small></div></div>
@@ -1374,7 +1392,6 @@
 <!-- 06 WHAT'S INCLUDED ...................................... -->
 <section class="dark artsec" id="included">
   <div class="wrap rv">
-    <p class="kick">What you get</p>
     <h2 class="ah">What lands<span class="it">in your inbox.</span></h2>
     <p class="say">Three things, in 48 hours, in the same format every time. That&rsquo;s what keeps a proper review at $97.</p>
     <div class="twocol">
@@ -1389,6 +1406,7 @@
           </figure>
         </div>
         <p class="stagenote" style="margin-top:14px">Watch it twice. Send it to whoever runs your ads. It&rsquo;s yours.</p>
+        <div class="slot " style="aspect-ratio:16/9"><span class="mk">Visual 10 · The action plan</span><p>A page of the written plan: three ranked fixes with the dollar figure beside each, as the client will actually receive it.</p></div>
       </div>
     </div>
     <div class="deliv3">
@@ -1403,12 +1421,14 @@
 <!-- 07 PROOF ................................................ -->
 <section class="light" id="proof">
   <div class="wrap rv">
-    <p class="kick">Who&rsquo;s doing it</p>
     <h2 class="ah">10+ years<span class="it">inside other people&rsquo;s ad accounts.</span></h2>
     <p class="say">Before AutoConvert, at my previous business, I ran Meta campaigns for service businesses in more than ten niches: trades, property, cosmetic clinics, hospitality training. That&rsquo;s what the checklist is built from.</p>
-    <div class="twocol proof">
+    <div class="proofrow">
+      <div class="slot " style="aspect-ratio:4/5"><span class="mk">Visual 11 · Luke</span><p>A proper portrait of Luke at work, not a headshot on white. Warm, direct, the person who&rsquo;ll actually be inside your account.</p></div>
+      <div class="twocol proof">
       <div class="quotecard"><q>Luke&rsquo;s ability to understand our business and speak with our voice is his greatest asset and perhaps the biggest problem we&rsquo;ve had in the past with previous marketing efforts.</q><div class="who">Peter Giannakis &middot; Director, HG Coffee School &middot; from my previous business</div></div>
       <div class="quotecard"><q>Leads used to get followed up whenever I found a spare minute between clients. Luke helped streamline our enquiries and lead capture so everything is in one place and tracked from start to finish. In this game, the fastest salesman gets the deal.</q><div class="who">Sam Roberts &middot; Principal Dealer, Rev&eacute; Auto Haus</div></div>
+      </div>
     </div>
   </div>
 </section>
@@ -1416,7 +1436,6 @@
 <!-- 08 RISK REVERSAL ........................................ -->
 <section class="dark honest" id="straight">
   <div class="wrap rv">
-    <p class="kick">Keeping it straight</p>
     <h2 class="ah">Yes, I also<span class="it">sell the fix.</span></h2>
     <p class="say" style="max-width:56ch">So you should be sceptical of an audit from me. Here&rsquo;s what keeps this one straight.</p>
     <div class="risks" id="risks"></div>
