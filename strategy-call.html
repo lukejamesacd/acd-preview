@@ -1705,6 +1705,11 @@
   .ahero h1.ah .it{font-size:.6em;line-height:1.05;margin-top:.08em}
   @media(max-width:1040px){.sc-hero .herovis{justify-self:start;max-width:340px}}
   @media(max-width:640px){.sc-hero .herovis{max-width:300px}}
+  /* title on two lines: "APPLY FOR A" / "STRATEGY CALL". The font size is worked out from the width of the text column
+     (the longest line is 13 characters, about 4.9 times the font size), so it never wraps to a third line.
+     The clamp line is the fallback for browsers without container units. */
+  .sc-hero .pitch{container-type:inline-size}
+  .sc-hero h1{white-space:nowrap;font-size:clamp(52px,8vw,128px);font-size:min(calc(100cqw / 5.3),178px)}
   /* no sticky order bar on this page, so the footer doesn't need v12's clearance for it */
   @media(max-width:760px){footer.lp{padding-bottom:0}}
 
@@ -1814,7 +1819,7 @@
   <div class="envbg" aria-hidden="true"></div>
   <div class="wrap inner rv">
     <div class="pitch">
-      <h1 class="ah">Apply for a strategy call</h1>
+      <h1 class="ah">Apply for a<br>strategy call</h1>
       <p class="ahsub"><span class="it">Turn your ad clicks into booked jobs.</span></p>
       <p class="lede">Running ads but missing sales? A lot of ad spend goes to waste after the click, because leads wait too long for a reply. I set up the automated systems that turn your traffic into paying customers, 24/7.</p>
       <ul class="hlist"><li><span class="tk"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12.5l5.5 5.5L20 7"/></svg></span><span>Book more jobs without increasing your ad spend</span></li><li><span class="tk"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12.5l5.5 5.5L20 7"/></svg></span><span>Respond to every enquiry instantly, day or night</span></li><li><span class="tk"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12.5l5.5 5.5L20 7"/></svg></span><span>Reclaim hours every week without hiring more staff</span></li></ul>
